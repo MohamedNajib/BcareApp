@@ -10,7 +10,6 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,17 +60,9 @@
 
             <com.example.fontutil.EditTextCustomFont
                 android:id="@+id/editText2"
-                style="@style/__"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="32dp"
-                android:background="@drawable/et_"
-                android:gravity="center"
+                style="@style/EditTextStyle"
                 android:hint="01008021145"
-                android:maxLines="1"
-                android:textColorHint="@color/hintColor"
+                android:inputType="phone"
                 app:font_name="@string/VIP_Rawy_Regular"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -79,15 +70,9 @@
 
             <com.example.fontutil.EditTextCustomFont
                 android:id="@+id/editText3"
-                style="@style/__"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/et_"
-                android:gravity="center"
+                style="@style/EditTextStyle0"
                 android:hint="كلمة المرور"
-                android:maxLines="1"
-                android:textColorHint="@color/hintColor"
+                android:inputType="textPassword"
                 app:font_name="@string/VIP_Rawy_Regular"
                 app:layout_constraintEnd_toEndOf="@+id/editText2"
                 app:layout_constraintStart_toStartOf="@+id/editText2"
@@ -122,8 +107,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:layout_marginBottom="32dp"
                 android:text="ليس لديك حساب بعد, افتح واحدا"
                 app:font_name="@string/VIP_Rawy_Regular"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/button"
                 app:layout_constraintTop_toBottomOf="@+id/button" />
 

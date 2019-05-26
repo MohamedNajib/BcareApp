@@ -54,32 +54,41 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-            <Spinner
-                android:id="@+id/Spinner_phoneNumber"
-                android:layout_width="82dp"
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="32dp"
-                android:background="@drawable/spinner_d"
-                app:layout_constraintBottom_toBottomOf="@+id/editText2"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/editText2" />
-
-            <com.example.fontutil.EditTextCustomFont
-                android:id="@+id/editText2"
-                style="@style/__"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="32dp"
-                android:background="@drawable/et_"
-                android:textColorHint="@color/hintColor"
-                android:gravity="center"
-                android:hint="ادخل رقم الهاتف"
-                android:maxLines="1"
-                app:font_name="@string/VIP_Rawy_Regular"
+                android:orientation="horizontal"
+                android:layoutDirection="ltr"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/Spinner_phoneNumber"
-                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+                <Spinner
+                    android:id="@+id/Spinner_phoneNumber"
+                    android:layout_width="82dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/spinner_d" />
+
+                <com.example.fontutil.EditTextCustomFont
+                    android:id="@+id/editText2"
+                    style="@style/__"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/et_"
+                    android:inputType="phone"
+                    android:freezesText="true"
+                    android:gravity="center"
+                    android:hint="ادخل رقم الهاتف"
+                    android:maxLines="1"
+                    android:textColorHint="@color/hintColor"
+                    app:font_name="@string/VIP_Rawy_Regular" />
+            </LinearLayout>
+
 
             <com.example.fontutil.ButtonCustomFont
                 android:id="@+id/button"
@@ -90,9 +99,9 @@
                 android:background="@drawable/login_btn"
                 android:text="انشاء حساب"
                 app:font_name="@string/VIP_Rawy_Bold_Bold"
-                app:layout_constraintEnd_toEndOf="@+id/editText2"
-                app:layout_constraintStart_toStartOf="@+id/Spinner_phoneNumber"
-                app:layout_constraintTop_toBottomOf="@+id/Spinner_phoneNumber"/>
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
             <com.example.fontutil.TextViewCustomFont
                 android:id="@+id/textView3"
@@ -100,20 +109,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
                 android:text="تسجيل الدخول"
                 app:font_name="@string/VIP_Rawy_Regular"
-                app:layout_constraintStart_toStartOf="@+id/button"
+                app:layout_constraintEnd_toStartOf="@+id/textViewCustomFont"
                 app:layout_constraintTop_toBottomOf="@+id/button" />
 
             <com.example.fontutil.TextViewCustomFont
+                android:id="@+id/textViewCustomFont"
                 style="@style/text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:text="لديك حساب , "
                 app:font_name="@string/VIP_Rawy_Regular"
-                app:layout_constraintStart_toEndOf="@+id/textView3"
+                app:layout_constraintEnd_toEndOf="@+id/button"
                 app:layout_constraintTop_toBottomOf="@+id/button" />
 
         </android.support.constraint.ConstraintLayout>

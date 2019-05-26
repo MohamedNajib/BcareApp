@@ -10,7 +10,6 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,32 +58,44 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-            <Spinner
-                android:id="@+id/Spinner_phoneNumber"
-                android:layout_width="62dp"
+            <LinearLayout
+                android:id="@+id/layout_phoneNumber"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="32dp"
-                android:background="@drawable/spinner"
-                app:layout_constraintBottom_toBottomOf="@+id/editText2"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/editText2" />
-
-            <com.example.fontutil.EditTextCustomFont
-                android:id="@+id/editText2"
-                style="@style/__"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="32dp"
-                android:background="@drawable/et_"
-                android:gravity="center"
-                android:hint="ادخل رقم الهاتف"
-                android:maxLines="1"
-                android:textColorHint="@color/hintColor"
-                app:font_name="@string/VIP_Rawy_Regular"
+                android:layoutDirection="ltr"
+                android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/Spinner_phoneNumber"
-                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+                <Spinner
+                    android:id="@+id/Spinner_phoneNumber"
+                    android:layout_width="62dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/spinner" />
+
+                <com.example.fontutil.EditTextCustomFont
+                    android:id="@+id/editText2"
+                    style="@style/__"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:inputType="phone"
+                    android:background="@drawable/et_"
+                    android:freezesText="true"
+                    android:gravity="center"
+                    android:hint="ادخل رقم الهاتف"
+                    android:maxLines="1"
+                    android:textColorHint="@color/hintColor"
+                    app:font_name="@string/VIP_Rawy_Regular"
+                    tools:layout_editor_absoluteX="62dp"
+                    tools:layout_editor_absoluteY="37dp" />
+
+            </LinearLayout>
+
 
             <FrameLayout
                 android:id="@+id/frameLayout"
@@ -93,9 +104,9 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="24dp"
                 android:background="@drawable/line"
-                app:layout_constraintEnd_toEndOf="@+id/editText2"
+                app:layout_constraintEnd_toEndOf="@+id/layout_phoneNumber"
                 app:layout_constraintStart_toEndOf="@+id/textView7"
-                app:layout_constraintTop_toBottomOf="@+id/editText2" />
+                app:layout_constraintTop_toBottomOf="@+id/layout_phoneNumber" />
 
             <com.example.fontutil.TextViewCustomFont
                 android:id="@+id/textView7"
@@ -109,7 +120,7 @@
                 app:font_name="@string/VIP_Rawy_Bold_Bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText2" />
+                app:layout_constraintTop_toBottomOf="@+id/layout_phoneNumber" />
 
             <FrameLayout
                 android:id="@+id/frameLayout2"
@@ -119,20 +130,15 @@
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/line"
                 app:layout_constraintEnd_toStartOf="@+id/textView7"
-                app:layout_constraintStart_toStartOf="@+id/Spinner_phoneNumber"
-                app:layout_constraintTop_toBottomOf="@+id/editText2" />
+                app:layout_constraintStart_toStartOf="@+id/layout_phoneNumber"
+                app:layout_constraintTop_toBottomOf="@+id/layout_phoneNumber" />
 
 
             <com.example.fontutil.EditTextCustomFont
                 android:id="@+id/editText3"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/et_"
-                android:gravity="center"
+                style="@style/EditTextStyle0"
+                android:inputType="textEmailAddress"
                 android:hint="البريد الاكتروني"
-                android:maxLines="1"
-                android:textColorHint="@color/hintColor"
                 app:font_name="@string/VIP_Rawy_Regular"
                 app:layout_constraintEnd_toEndOf="@+id/frameLayout"
                 app:layout_constraintStart_toStartOf="@+id/frameLayout2"
@@ -141,14 +147,9 @@
 
             <com.example.fontutil.EditTextCustomFont
                 android:id="@+id/editText"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/et_"
-                android:gravity="center"
+                style="@style/EditTextStyle0"
                 android:hint="كلمة المرور"
-                android:maxLines="1"
-                android:textColorHint="@color/hintColor"
+                android:inputType="textPassword"
                 app:font_name="@string/VIP_Rawy_Regular"
                 app:layout_constraintEnd_toEndOf="@+id/editText3"
                 app:layout_constraintStart_toStartOf="@+id/editText3"
@@ -182,6 +183,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:layout_marginBottom="32dp"
                 android:text="ليس لديك حساب بعد, افتح واحدا"
                 app:font_name="@string/VIP_Rawy_Regular"
                 app:layout_constraintBottom_toBottomOf="parent"
