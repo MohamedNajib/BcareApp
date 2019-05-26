@@ -31,7 +31,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_login_logo" />
 
-            <TextView
+            <com.example.fontutil.TextViewCustomFont
                 android:id="@+id/textView"
                 style="@style/title"
                 android:layout_width="wrap_content"
@@ -39,11 +39,12 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginEnd="24dp"
                 android:text="انشاء حساب"
+                app:font_name="@string/VIP_Rawy_Bold_Bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-            <TextView
+            <com.example.fontutil.TextViewCustomFont
                 android:id="@+id/textView2"
                 style="@style/login_description"
                 android:layout_width="wrap_content"
@@ -52,11 +53,12 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="24dp"
                 android:text="ادخل بريدك الاكتروني ثم اختر كلمة مرور"
+                app:font_name="@string/VIP_Rawy_Regular"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-            <EditText
+            <com.example.fontutil.EditTextCustomFont
                 android:id="@+id/editText2"
                 style="@style/__"
                 android:layout_width="match_parent"
@@ -68,12 +70,13 @@
                 android:gravity="center"
                 android:hint="البريد الاكتروني "
                 android:maxLines="1"
+                app:font_name="@string/VIP_Rawy_Regular"
                 android:textColorHint="@color/hintColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-            <EditText
+            <com.example.fontutil.EditTextCustomFont
                 android:id="@+id/editText3"
                 style="@style/__"
                 android:layout_width="0dp"
@@ -84,12 +87,13 @@
                 android:hint="كلمة المرور"
                 android:maxLines="1"
                 android:textColorHint="@color/hintColor"
+                app:font_name="@string/VIP_Rawy_Regular"
                 app:layout_constraintEnd_toEndOf="@+id/editText2"
                 app:layout_constraintStart_toStartOf="@+id/editText2"
                 app:layout_constraintTop_toBottomOf="@+id/editText2" />
 
 
-            <EditText
+            <com.example.fontutil.EditTextCustomFont
                 android:id="@+id/editText"
                 style="@style/__"
                 android:layout_width="0dp"
@@ -100,12 +104,13 @@
                 android:hint="تأكيد كلمة المرور"
                 android:maxLines="1"
                 android:textColorHint="@color/hintColor"
+                app:font_name="@string/VIP_Rawy_Regular"
                 app:layout_constraintEnd_toEndOf="@+id/editText3"
                 app:layout_constraintStart_toStartOf="@+id/editText3"
                 app:layout_constraintTop_toBottomOf="@+id/editText3" />
 
 
-            <Button
+            <com.example.fontutil.ButtonCustomFont
                 android:id="@+id/button"
                 style="@style/login_btn"
                 android:layout_width="0dp"
@@ -113,25 +118,28 @@
                 android:layout_marginTop="16dp"
                 android:background="@drawable/login_btn"
                 android:text="تسجيل الدخول"
+                app:font_name="@string/VIP_Rawy_Bold_Bold"
                 app:layout_constraintEnd_toEndOf="@+id/editText"
                 app:layout_constraintStart_toStartOf="@+id/editText"
                 app:layout_constraintTop_toBottomOf="@+id/editText" />
 
-            <TextView
+            <com.example.fontutil.TextViewCustomFont
                 style="@style/no_account"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="نسيت كلمة المرور"
+                app:font_name="@string/VIP_Rawy_Regular"
                 app:layout_constraintStart_toStartOf="@+id/button"
                 app:layout_constraintTop_toBottomOf="@+id/button" />
 
-            <TextView
+            <com.example.fontutil.TextViewCustomFont
                 style="@style/no_account"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="ليس لديك حساب بعد, افتح واحدا"
+                app:font_name="@string/VIP_Rawy_Regular"
                 app:layout_constraintEnd_toEndOf="@+id/button"
                 app:layout_constraintTop_toBottomOf="@+id/button" />
 

@@ -31,7 +31,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_woman_or_man" />
 
-            <TextView
+            <com.example.fontutil.TextViewCustomFont
                 android:id="@+id/textView"
                 style="@style/title"
                 android:layout_width="wrap_content"
@@ -39,11 +39,12 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginEnd="24dp"
                 android:text="اختيار نوع الصالون"
+                app:font_name="@string/VIP_Rawy_Bold_Bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-            <TextView
+            <com.example.fontutil.TextViewCustomFont
                 android:id="@+id/textView2"
                 style="@style/login_description"
                 android:layout_width="wrap_content"
@@ -52,11 +53,12 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="24dp"
                 android:text="هل تبحث عن صالونات للرجال أو للنساء ؟"
+                app:font_name="@string/VIP_Rawy_Regular"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-            <EditText
+            <com.example.fontutil.EditTextCustomFont
                 android:id="@+id/editText2"
                 style="@style/women"
                 android:layout_width="0dp"
@@ -72,12 +74,13 @@
                 android:paddingStart="4dp"
                 android:paddingEnd="16dp"
                 android:textColorHint="#01f4c5"
+                app:font_name="@string/VIP_Rawy_Regular"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/editText3"
                 app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-            <EditText
+            <com.example.fontutil.EditTextCustomFont
                 android:id="@+id/editText3"
                 style="@style/women"
                 android:layout_width="0dp"
@@ -89,6 +92,7 @@
                 android:drawableEnd="@drawable/ic_man"
                 android:gravity="center"
                 android:hint="رجال"
+                app:font_name="@string/VIP_Rawy_Regular"
                 android:maxLines="1"
                 android:paddingStart="4dp"
                 android:paddingEnd="16dp"
@@ -98,7 +102,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-            <EditText
+            <com.example.fontutil.EditTextCustomFont
                 android:id="@+id/editText4"
                 style="@style/women"
                 android:layout_width="0dp"
@@ -107,13 +111,14 @@
                 android:background="@drawable/et_f"
                 android:gravity="center"
                 android:hint="أطفال"
+                app:font_name="@string/VIP_Rawy_Regular"
                 android:maxLines="1"
                 android:textColorHint="@android:color/white"
                 app:layout_constraintEnd_toEndOf="@+id/editText2"
                 app:layout_constraintStart_toStartOf="@+id/editText3"
                 app:layout_constraintTop_toBottomOf="@+id/editText2" />
 
-            <Button
+            <com.example.fontutil.ButtonCustomFont
                 android:id="@+id/button"
                 style="@style/login_btn"
                 android:layout_width="0dp"
@@ -126,6 +131,7 @@
                 android:paddingStart="24dp"
                 android:paddingEnd="24dp"
                 android:text="متابعة"
+                app:font_name="@string/VIP_Rawy_Bold_Bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/editText4"
                 app:layout_constraintStart_toStartOf="@+id/editText4"

@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">BcareApplication</string>
 
+    <string name="VIP_Rawy_Bold_Bold">VIP_Rawy_Bold_Bold.otf</string>
+    <string name="VIP_Rawy_Regular">VIP_Rawy_Regular.otf</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
