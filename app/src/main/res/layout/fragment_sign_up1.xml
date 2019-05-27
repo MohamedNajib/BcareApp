@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/login_background"
-    tools:context=".LoginFragment">
+    tools:context=".ui.fragment.SignUpFragment1">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -59,7 +59,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView" />
 
             <com.example.fontutil.EditTextCustomFont
-                android:id="@+id/editText2"
+                android:id="@+id/ET_SignUpEmail"
                 style="@style/EditTextStyle"
                 android:inputType="textEmailAddress"
                 android:hint="البريد الاكتروني "
@@ -69,29 +69,29 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
             <com.example.fontutil.EditTextCustomFont
-                android:id="@+id/editText3"
+                android:id="@+id/ET_SignUpPassword"
                 style="@style/EditTextStyle0"
                 android:inputType="textPassword"
                 android:hint="كلمة المرور"
                 app:font_name="@string/VIP_Rawy_Regular"
-                app:layout_constraintEnd_toEndOf="@+id/editText2"
-                app:layout_constraintStart_toStartOf="@+id/editText2"
-                app:layout_constraintTop_toBottomOf="@+id/editText2" />
+                app:layout_constraintEnd_toEndOf="@+id/ET_SignUpEmail"
+                app:layout_constraintStart_toStartOf="@+id/ET_SignUpEmail"
+                app:layout_constraintTop_toBottomOf="@+id/ET_SignUpEmail" />
 
 
             <com.example.fontutil.EditTextCustomFont
-                android:id="@+id/editText"
+                android:id="@+id/ET_SignUpREPassword"
                 style="@style/EditTextStyle0"
                 android:hint="تأكيد كلمة المرور"
                 android:inputType="textPassword"
                 app:font_name="@string/VIP_Rawy_Regular"
-                app:layout_constraintEnd_toEndOf="@+id/editText3"
-                app:layout_constraintStart_toStartOf="@+id/editText3"
-                app:layout_constraintTop_toBottomOf="@+id/editText3" />
+                app:layout_constraintEnd_toEndOf="@+id/ET_SignUpPassword"
+                app:layout_constraintStart_toStartOf="@+id/ET_SignUpPassword"
+                app:layout_constraintTop_toBottomOf="@+id/ET_SignUpPassword" />
 
 
             <com.example.fontutil.ButtonCustomFont
-                android:id="@+id/button"
+                android:id="@+id/BTN_SignUp_ptn"
                 style="@style/login_btn"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
@@ -99,9 +99,9 @@
                 android:background="@drawable/login_btn"
                 android:text="تسجيل الدخول"
                 app:font_name="@string/VIP_Rawy_Bold_Bold"
-                app:layout_constraintEnd_toEndOf="@+id/editText"
-                app:layout_constraintStart_toStartOf="@+id/editText"
-                app:layout_constraintTop_toBottomOf="@+id/editText" />
+                app:layout_constraintEnd_toEndOf="@+id/ET_SignUpREPassword"
+                app:layout_constraintStart_toStartOf="@+id/ET_SignUpREPassword"
+                app:layout_constraintTop_toBottomOf="@+id/ET_SignUpREPassword" />
 
             <com.example.fontutil.TextViewCustomFont
                 style="@style/no_account"
@@ -110,18 +110,20 @@
                 android:layout_marginTop="8dp"
                 android:text="نسيت كلمة المرور"
                 app:font_name="@string/VIP_Rawy_Regular"
-                app:layout_constraintStart_toStartOf="@+id/button"
-                app:layout_constraintTop_toBottomOf="@+id/button" />
+                app:layout_constraintStart_toStartOf="@+id/BTN_SignUp_ptn"
+                app:layout_constraintTop_toBottomOf="@+id/BTN_SignUp_ptn" />
 
             <com.example.fontutil.TextViewCustomFont
                 style="@style/no_account"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:layout_marginBottom="32dp"
                 android:text="ليس لديك حساب بعد, افتح واحدا"
                 app:font_name="@string/VIP_Rawy_Regular"
-                app:layout_constraintEnd_toEndOf="@+id/button"
-                app:layout_constraintTop_toBottomOf="@+id/button" />
+                app:layout_constraintBottom_toBottomOf="@+id/BTN_SignUp_ptn"
+                app:layout_constraintEnd_toEndOf="@+id/BTN_SignUp_ptn"
+                app:layout_constraintTop_toBottomOf="@+id/BTN_SignUp_ptn" />
 
         </android.support.constraint.ConstraintLayout>
     </ScrollView>
