@@ -9,20 +9,13 @@ import android.view.ViewGroup;
 
 import com.example.bcareapplication.R;
 
-import butterknife.ButterKnife;
-import butterknife.OnClick;
-import butterknife.Unbinder;
-
-
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ForgotPassword2 extends Fragment {
+public class test extends Fragment {
 
 
-    Unbinder unbinder;
-
-    public ForgotPassword2() {
+    public test() {
         // Required empty public constructor
     }
 
@@ -31,18 +24,7 @@ public class ForgotPassword2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_forgot_password2, container, false);
-        unbinder = ButterKnife.bind(this, view);
-        return view;
+        return inflater.inflate(R.layout.fragment_test, container, false);
     }
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        unbinder.unbind();
-    }
-
-    @OnClick(R.id.BTN_Ending)
-    public void onViewClicked() {
-    }
 }

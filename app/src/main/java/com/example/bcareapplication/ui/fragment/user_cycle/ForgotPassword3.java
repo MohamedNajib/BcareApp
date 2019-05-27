@@ -1,4 +1,4 @@
-package com.example.bcareapplication.ui.fragment;
+package com.example.bcareapplication.ui.fragment.user_cycle;
 
 
 import android.os.Bundle;
@@ -11,8 +11,7 @@ import android.widget.Toast;
 import com.example.bcareapplication.R;
 import com.github.glomadrian.codeinputlib.CodeInput;
 
-import java.util.Arrays;
-
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
@@ -21,14 +20,14 @@ import butterknife.Unbinder;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ForgotPasswordFragment3 extends Fragment {
+public class ForgotPassword3 extends Fragment {
 
 
     Unbinder unbinder;
 
     private CodeInput cInput;
 
-    public ForgotPasswordFragment3() {
+    public ForgotPassword3() {
         // Required empty public constructor
     }
 
@@ -42,7 +41,6 @@ public class ForgotPasswordFragment3 extends Fragment {
 
         cInput = view.findViewById(R.id.CodeInput_ForgotPass);
 
-
         return view;
     }
 
@@ -54,7 +52,10 @@ public class ForgotPasswordFragment3 extends Fragment {
 
 
     /**
-     * get Confirm String Code From CodeInput View
+     * get Character Code From CodeInput View
+     * and Confirm to String
+     *
+     * @param characterCode
      */
     private String getStringCode(Character[] characterCode) {
         StringBuilder stringBuilder = new StringBuilder(characterCode.length);

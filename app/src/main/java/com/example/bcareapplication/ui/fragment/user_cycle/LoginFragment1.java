@@ -1,4 +1,4 @@
-package com.example.bcareapplication.ui.fragment;
+package com.example.bcareapplication.ui.fragment.user_cycle;
 
 
 import android.os.Bundle;
@@ -19,16 +19,18 @@ import butterknife.Unbinder;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class LoginFragment2 extends Fragment {
+public class LoginFragment1 extends Fragment {
 
 
     Unbinder unbinder;
-    @BindView(R.id.ET_LoginPhoneNumber)
-    EditTextCustomFont ETLoginPhoneNumber;
+    @BindView(R.id.ET_LoginPhone)
+    EditTextCustomFont ETLoginPhone;
+    @BindView(R.id.ET_LoginEmail)
+    EditTextCustomFont ETLoginEmail;
     @BindView(R.id.ET_LoginPassword)
     EditTextCustomFont ETLoginPassword;
 
-    public LoginFragment2() {
+    public LoginFragment1() {
         // Required empty public constructor
     }
 
@@ -37,7 +39,7 @@ public class LoginFragment2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_login2, container, false);
+        View view = inflater.inflate(R.layout.fragment_login1, container, false);
         unbinder = ButterKnife.bind(this, view);
         return view;
     }
@@ -48,14 +50,14 @@ public class LoginFragment2 extends Fragment {
         unbinder.unbind();
     }
 
-    @OnClick({R.id.BTN_Login_, R.id.TV_Login_ForgotPassLink_, R.id.TV_Login_CreateNewAccountLink_})
+    @OnClick({R.id.BTN_Login, R.id.TV_Login_ForgotPasslink, R.id.TV_Login_CreateNewAccountLink})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.BTN_Login_:
+            case R.id.BTN_Login:
                 break;
-            case R.id.TV_Login_ForgotPassLink_:
+            case R.id.TV_Login_ForgotPasslink:
                 break;
-            case R.id.TV_Login_CreateNewAccountLink_:
+            case R.id.TV_Login_CreateNewAccountLink:
                 break;
         }
     }

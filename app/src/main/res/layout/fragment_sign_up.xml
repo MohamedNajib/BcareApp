@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/sign_up_background"
-    tools:context=".ui.fragment.SignUpFragment">
+    tools:context=".ui.fragment.user_cycle.SignUpFragment">
 
     <ScrollView
         android:layout_width="match_parent"

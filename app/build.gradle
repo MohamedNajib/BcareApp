@@ -34,6 +34,9 @@ dependencies {
     //CodeInput
     implementation 'com.github.glomadrian:CodeInput:1.1@aar'
 
+    //Circle Image View
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
     // glide
     implementation 'com.github.bumptech.glide:glide:4.8.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
