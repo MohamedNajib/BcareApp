@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dimension8"
+    android:layout_marginEnd="@dimen/dimension8">
+
+    <com.example.bcareapplication.RoundRectCornerImageView
+        android:id="@+id/roundRectCornerImageView2"
+        android:layout_width="@dimen/dimension126"
+        android:layout_height="@dimen/dimension126"
+        android:src="@drawable/rrr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.fontutil.TextViewCustomFont
+        android:id="@+id/textViewCustomFont9"
+        style="@style/ProfileText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="كامل علامة"
+        app:font_name="@string/VIP_Rawy_Bold_Bold"
+        app:layout_constraintEnd_toEndOf="@+id/roundRectCornerImageView2"
+        app:layout_constraintStart_toStartOf="@+id/roundRectCornerImageView2"
+        app:layout_constraintTop_toBottomOf="@+id/roundRectCornerImageView2" />
+
+    <com.example.fontutil.TextViewCustomFont
+        style="@style/__"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="خبير الشعر"
+        app:font_name="@string/VIP_Rawy_Regular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textViewCustomFont9"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCustomFont9" />
+</android.support.constraint.ConstraintLayout>

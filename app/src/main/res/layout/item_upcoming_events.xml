@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@android:color/transparent"
+    android:layout_height="@dimen/dimension110"
+    android:layout_marginTop="@dimen/dimension8"
+    android:layout_marginBottom="@dimen/dimension8"
+    android:layout_marginStart="@dimen/dimension16"
+    android:layout_marginEnd="@dimen/dimension16">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="@dimen/dimension8"
+        app:cardElevation="@dimen/dimension12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/constraintLayout5"
+                android:layout_width="@dimen/dimension106"
+                android:layout_height="match_parent"
+                android:background="@drawable/yellow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.example.fontutil.TextViewCustomFont
+                    android:id="@+id/textViewCustomFont13"
+                    style="@style/mm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimension16"
+                    android:layout_marginTop="@dimen/dimension16"
+                    android:text="ماي"
+                    app:font_name="@string/VIP_Rawy_Bold_Bold"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewCustomFont15"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.example.fontutil.TextViewCustomFont
+                    android:id="@+id/textViewCustomFont15"
+                    style="@style/mm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimension8"
+                    android:layout_marginEnd="@dimen/dimension16"
+                    android:text="16"
+                    app:font_name="@string/Dubai_Bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewCustomFont13"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textViewCustomFont13"
+                    app:layout_constraintTop_toTopOf="@+id/textViewCustomFont13" />
+
+                <com.example.fontutil.TextViewCustomFont
+                    style="@style/am"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimension8"
+                    android:layout_marginEnd="@dimen/dimension8"
+                    android:layout_marginBottom="@dimen/dimension8"
+                    android:text="10:30 AM"
+                    app:font_name="@string/Dubai_Light"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewCustomFont13"
+                    app:layout_constraintVertical_bias="0.0" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="@dimen/dimension0"
+                android:layout_height="@dimen/dimension0"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/constraintLayout5"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <com.example.fontutil.TextViewCustomFont
+                    android:id="@+id/textViewCustomFont16"
+                    style="@style/it"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimension16"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="@dimen/dimension32"
+                    android:text="تصفيف لاشعر"
+                    app:font_name="@string/VIP_Rawy_Bold_Bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.example.fontutil.TextViewCustomFont
+                    android:id="@+id/textView4"
+                    style="@style/addd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="@dimen/dimension8"
+                    android:drawableStart="@drawable/ic_path_location"
+                    android:drawablePadding="@dimen/dimension8"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="دبي, حي التحرير المسكن الرابع"
+                    app:font_name="@string/VIP_Rawy_Regular"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView3"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/textViewCustomFont16"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewCustomFont16" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimension16"
+                    android:layout_marginBottom="@dimen/dimension8"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:srcCompat="@drawable/ic_phone_icon_ev" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimension16"
+                    android:layout_marginBottom="@dimen/dimension8"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/buttonCustomFont2"
+                    app:srcCompat="@drawable/ic_location_icon_ev" />
+
+
+                <com.example.fontutil.ButtonCustomFont
+                    android:id="@+id/buttonCustomFont2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimension28"
+                    android:layout_marginStart="@dimen/dimension16"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/re"
+                    android:text="إعادة جدولة"
+                    app:font_name="@string/VIP_Rawy_Regular"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView4"
+                    app:layout_constraintVertical_bias="1.0" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>

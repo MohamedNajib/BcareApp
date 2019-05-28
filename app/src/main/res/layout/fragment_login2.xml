@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/login_background"
     tools:context=".ui.fragment.user_cycle.LoginFragment2">
 
@@ -21,11 +21,11 @@
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="156dp"
-                android:layout_height="115dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="90dp"
-                android:layout_marginEnd="8dp"
+                android:layout_width="@dimen/dimension156"
+                android:layout_height="@dimen/dimension115"
+                android:layout_marginStart="@dimen/dimension8"
+                android:layout_marginTop="@dimen/dimension90"
+                android:layout_marginEnd="@dimen/dimension8"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -36,8 +36,8 @@
                 style="@style/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginStart="@dimen/dimension24"
+                android:layout_marginEnd="@dimen/dimension24"
                 android:text="تسجيل الدخول"
                 app:font_name="@string/VIP_Rawy_Bold_Bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -49,9 +49,9 @@
                 style="@style/login_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginStart="@dimen/dimension24"
+                android:layout_marginTop="@dimen/dimension8"
+                android:layout_marginEnd="@dimen/dimension24"
                 android:text="دخول عن طريق رقم الجوال"
                 app:font_name="@string/VIP_Rawy_Regular"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -82,9 +82,9 @@
             <com.example.fontutil.ButtonCustomFont
                 android:id="@+id/BTN_Login_"
                 style="@style/login_btn"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="16dp"
+                android:layout_width="@dimen/dimension0"
+                android:layout_height="@dimen/dimension50"
+                android:layout_marginTop="@dimen/dimension16"
                 android:background="@drawable/login_btn"
                 android:text="تسجيل الدخول"
                 app:font_name="@string/VIP_Rawy_Bold_Bold"
@@ -97,7 +97,7 @@
                 style="@style/no_account"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/dimension8"
                 android:text="نسيت كلمة المرور"
                 app:font_name="@string/VIP_Rawy_Regular"
                 app:layout_constraintStart_toStartOf="@+id/BTN_Login_"
@@ -108,18 +108,16 @@
                 style="@style/no_account"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="32dp"
+                android:layout_marginTop="@dimen/dimension8"
+                android:layout_marginBottom="@dimen/dimension32"
                 android:text="ليس لديك حساب بعد, افتح واحدا"
                 app:font_name="@string/VIP_Rawy_Regular"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/BTN_Login_"
                 app:layout_constraintTop_toBottomOf="@+id/BTN_Login_" />
 
-
         </android.support.constraint.ConstraintLayout>
+
     </ScrollView>
-
-
 
 </android.support.constraint.ConstraintLayout>
