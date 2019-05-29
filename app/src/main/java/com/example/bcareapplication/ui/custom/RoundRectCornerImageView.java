@@ -1,4 +1,4 @@
-package com.example.bcareapplication;
+package com.example.bcareapplication.ui.custom;
 
 import android.content.Context;
 import android.graphics.Canvas;

@@ -8,7 +8,7 @@
     android:layout_marginStart="@dimen/dimension8"
     android:layout_marginEnd="@dimen/dimension8">
 
-    <com.example.bcareapplication.RoundRectCornerImageView
+    <com.example.bcareapplication.ui.custom.RoundRectCornerImageView
         android:id="@+id/roundRectCornerImageView2"
         android:layout_width="@dimen/dimension126"
         android:layout_height="@dimen/dimension126"
@@ -32,7 +32,7 @@
         style="@style/__"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="@dimen/dimension16"
         android:text="خبير الشعر"
         app:font_name="@string/VIP_Rawy_Regular"
         app:layout_constraintBottom_toBottomOf="parent"

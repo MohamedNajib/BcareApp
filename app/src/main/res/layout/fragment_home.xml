@@ -27,7 +27,7 @@
                 android:layout_width="@dimen/dimension21"
                 android:layout_height="@dimen/dimension16"
                 android:layout_marginTop="@dimen/dimension24"
-                android:layout_marginEnd="@dimen/dimension32"
+                android:layout_marginEnd="@dimen/dimension24"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_nav_icon" />
@@ -59,7 +59,7 @@
                 style="@style/ProfileText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dimension32"
+                android:layout_marginStart="@dimen/dimension24"
                 android:text="مرحبا بك"
                 app:font_name="@string/VIP_Rawy_Bold_Bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -394,7 +394,7 @@
                 style="@style/Specialists"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dimension32"
+                android:layout_marginStart="@dimen/dimension24"
                 android:layout_marginTop="@dimen/dimension16"
                 android:text="أخصائيون"
                 app:font_name="@string/VIP_Rawy_Bold_Bold"
@@ -423,6 +423,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewCustomFont10"
                 tools:listitem="@layout/item_specialists" />
+
 
         </android.support.constraint.ConstraintLayout>
 

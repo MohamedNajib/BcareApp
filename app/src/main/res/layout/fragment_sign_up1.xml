@@ -61,8 +61,10 @@
             <com.example.fontutil.EditTextCustomFont
                 android:id="@+id/ET_SignUpEmail"
                 style="@style/EditTextStyle"
-                android:inputType="textEmailAddress"
+                android:layout_marginStart="@dimen/dimension24"
+                android:layout_marginEnd="@dimen/dimension24"
                 android:hint="البريد الاكتروني "
+                android:inputType="textEmailAddress"
                 app:font_name="@string/VIP_Rawy_Regular"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -121,7 +123,7 @@
                 android:layout_marginBottom="@dimen/dimension32"
                 android:text="ليس لديك حساب بعد, افتح واحدا"
                 app:font_name="@string/VIP_Rawy_Regular"
-                app:layout_constraintBottom_toBottomOf="@+id/BTN_SignUp_ptn"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/BTN_SignUp_ptn"
                 app:layout_constraintTop_toBottomOf="@+id/BTN_SignUp_ptn" />
 

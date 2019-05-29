@@ -9,6 +9,8 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.example.bcareapplication.R;
+import com.example.bcareapplication.ui.fragment.ConfirmationFragment;
+import com.example.bcareapplication.ui.fragment.ReviewsSpecialFragment;
 import com.example.bcareapplication.ui.fragment.bottom_nav.HomeFragment;
 import com.example.bcareapplication.ui.fragment.bottom_nav.MyEventFragment;
 import com.example.bcareapplication.ui.fragment.bottom_nav.ProfileFragment;
@@ -33,11 +35,16 @@ public class BottomNavActivity extends AppCompatActivity {
                     break;
 
                 case R.id.navigation_time:
-                    fragment = new MyEventFragment();
+
+                    fragment = new ConfirmationFragment();
+                    //fragment = new MyEventFragment();
                     break;
 
                 case R.id.navigation_account:
-                    fragment = new ProfileFragment();
+
+                    fragment = new ReviewsSpecialFragment();
+                    //fragment = new ConfirmationFragment();
+                    //fragment = new ProfileFragment();
                     break;
             }
             replaceFragments(fragment, getSupportFragmentManager(), R.id.FrameLayoutFragment_Container);

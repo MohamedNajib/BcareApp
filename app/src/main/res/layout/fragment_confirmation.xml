@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/confirmation_background"
+    tools:context=".ui.fragment.ConfirmationFragment">
+
+    <com.example.fontutil.TextViewCustomFont
+        android:id="@+id/textViewCustomFont11"
+        style="@style/conf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimension24"
+        android:layout_marginTop="@dimen/dimension8"
+        android:layout_marginEnd="@dimen/dimension8"
+        android:text="تأكيد الموعد"
+        app:font_name="@string/VIP_Rawy_Bold_Bold"
+        app:layout_constraintEnd_toStartOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimension24"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewCustomFont11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textViewCustomFont11"
+        app:layout_constraintTop_toTopOf="@+id/textViewCustomFont11"
+        app:srcCompat="@drawable/ic_chevron_right_black_24dp" />
+
+
+    <com.example.fontutil.TextViewCustomFont
+        android:id="@+id/textViewCustomFont12"
+        style="@style/conff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="الرجاء ملأ المعلومات أسفله ثم الضغط على تأكيد"
+        app:font_name="@string/VIP_Rawy_Bold_Bold"
+        app:layout_constraintStart_toStartOf="@+id/textViewCustomFont11"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCustomFont11" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimension0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCustomFont12"
+        app:layout_constraintVertical_bias="0.0">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimension24"
+                android:layout_marginTop="@dimen/dimension16"
+                android:layout_marginEnd="@dimen/dimension24"
+                app:cardCornerRadius="@dimen/dimension8"
+                app:cardElevation="@dimen/dimension12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/constraintLayout5"
+                        android:layout_width="@dimen/dimension106"
+                        android:layout_height="@dimen/dimension0"
+                        android:background="@drawable/yellow"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.example.fontutil.TextViewCustomFont
+                            android:id="@+id/textViewCustomFont13"
+                            style="@style/mm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimension16"
+                            android:layout_marginTop="@dimen/dimension16"
+                            android:text="ماي"
+                            app:font_name="@string/VIP_Rawy_Bold_Bold"
+                            app:layout_constraintEnd_toStartOf="@+id/textViewCustomFont15"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintHorizontal_chainStyle="packed"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.example.fontutil.TextViewCustomFont
+                            android:id="@+id/textViewCustomFont15"
+                            style="@style/mm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimension8"
+                            android:layout_marginEnd="@dimen/dimension16"
+                            android:text="16"
+                            app:font_name="@string/Dubai_Bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/textViewCustomFont13"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/textViewCustomFont13"
+                            app:layout_constraintTop_toTopOf="@+id/textViewCustomFont13" />
+
+                        <com.example.fontutil.TextViewCustomFont
+                            style="@style/am"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimension8"
+                            android:layout_marginEnd="@dimen/dimension8"
+                            android:layout_marginBottom="@dimen/dimension8"
+                            android:text="10:30 AM"
+                            app:font_name="@string/Dubai_Light"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textViewCustomFont13"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                    </android.support.constraint.ConstraintLayout>
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="@dimen/dimension0"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/constraintLayout5"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0">
+
+
+                        <com.example.fontutil.TextViewCustomFont
+                            android:id="@+id/textViewCustomFont16"
+                            style="@style/it"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimension16"
+                            android:layout_marginTop="@dimen/dimension8"
+                            android:layout_marginEnd="@dimen/dimension16"
+                            android:text="تصفيف لاشعر"
+                            app:font_name="@string/VIP_Rawy_Bold_Bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.example.fontutil.TextViewCustomFont
+                            android:id="@+id/textViewCustomFont19"
+                            style="@style/vip_saloon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimension8"
+                            android:layout_marginEnd="@dimen/dimension16"
+                            android:text="VIP Saloon"
+                            app:font_name="@string/VIP_Rawy_Bold_Bold"
+                            app:layout_constraintBottom_toTopOf="@+id/textView4"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="@+id/textViewCustomFont16"
+                            app:layout_constraintTop_toBottomOf="@+id/textViewCustomFont16" />
+
+                        <com.example.fontutil.TextViewCustomFont
+                            android:id="@+id/textView4"
+                            style="@style/addd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimension8"
+                            android:layout_marginEnd="@dimen/dimension16"
+                            android:layout_marginBottom="@dimen/dimension8"
+                            android:drawableStart="@drawable/ic_path_location"
+                            android:drawablePadding="@dimen/dimension8"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:text="دبي, حي التحرير المسكن الرابع"
+                            app:font_name="@string/VIP_Rawy_Regular"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="@+id/textViewCustomFont19"
+                            app:layout_constraintTop_toBottomOf="@+id/textViewCustomFont16"
+                            app:layout_constraintVertical_bias="1.0" />
+
+                    </android.support.constraint.ConstraintLayout>
+
+                </android.support.constraint.ConstraintLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout8"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimension50"
+                android:background="@drawable/ptn_a"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/dimension16"
+                android:paddingEnd="@dimen/dimension16"
+                app:layout_constraintBottom_toBottomOf="@+id/editTextCustomFont"
+                app:layout_constraintEnd_toEndOf="@+id/cardView"
+                app:layout_constraintTop_toTopOf="@+id/editTextCustomFont">
+
+                <com.example.fontutil.TextViewCustomFont
+                    style="@style/nu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="@dimen/dimension4"
+                    android:paddingEnd="@dimen/dimension4"
+                    android:text="250"
+                    app:font_name="@string/Dubai_Bold" />
+
+                <com.example.fontutil.TextViewCustomFont
+                    style="@style/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/dimension4"
+                    android:paddingEnd="@dimen/dimension4"
+                    android:text=" دينار"
+                    app:font_name="@string/VIP_Rawy_Bold_Bold" />
+
+            </LinearLayout>
+
+            <com.example.fontutil.EditTextCustomFont
+                android:id="@+id/editTextCustomFont"
+                style="@style/eedd_"
+                android:layout_width="@dimen/dimension0"
+                android:layout_height="@dimen/dimension50"
+                android:layout_marginTop="@dimen/dimension24"
+                android:layout_marginEnd="@dimen/dimension16"
+                android:background="@drawable/pttnn"
+                android:drawableStart="@drawable/ic_group_m"
+                android:gravity="center"
+                android:hint="ادخل كود الخصم "
+                android:singleLine="true"
+                android:paddingStart="@dimen/dimension16"
+                android:paddingEnd="@dimen/dimension16"
+                app:font_name="@string/VIP_Rawy_Regular"
+                app:layout_constraintEnd_toStartOf="@+id/linearLayout8"
+                app:layout_constraintStart_toStartOf="@+id/cardView"
+                app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="@dimen/dimension0"
+                android:layout_height="@dimen/dimension50"
+                android:layout_marginTop="@dimen/dimension16"
+                android:background="@drawable/pttnn"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout8"
+                app:layout_constraintStart_toStartOf="@+id/editTextCustomFont"
+                app:layout_constraintTop_toBottomOf="@+id/editTextCustomFont" />
+
+
+            <com.example.fontutil.EditTextCustomFont
+                android:id="@+id/ET_event_dare"
+                style="@style/eedd_"
+                android:layout_width="@dimen/dimension0"
+                android:layout_height="@dimen/dimension50"
+                android:layout_marginTop="@dimen/dimension16"
+                android:background="@drawable/pttnn"
+                android:drawableEnd="@drawable/ic_calendar_com"
+                android:gravity="start|center_vertical"
+                android:hint="4:30 PM على2019, 24 ماي "
+                android:singleLine="true"
+                android:paddingStart="@dimen/dimension16"
+                android:paddingEnd="@dimen/dimension16"
+                app:font_name="@string/VIP_Rawy_Bold_Bold"
+                app:layout_constraintEnd_toEndOf="@+id/spinner"
+                app:layout_constraintStart_toStartOf="@+id/spinner"
+                app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+            <com.example.fontutil.EditTextCustomFont
+                android:id="@+id/ET_FollName"
+                style="@style/maneF"
+                android:layout_width="@dimen/dimension0"
+                android:layout_height="@dimen/dimension50"
+                android:layout_marginTop="@dimen/dimension16"
+                android:background="@drawable/pttnn"
+                android:gravity="start|center_vertical"
+                android:hint="اسمك الكامل"
+                android:singleLine="true"
+                android:paddingStart="@dimen/dimension16"
+                android:paddingEnd="@dimen/dimension16"
+                app:font_name="@string/VIP_Rawy_Regular"
+                app:layout_constraintEnd_toEndOf="@+id/ET_event_dare"
+                app:layout_constraintStart_toStartOf="@+id/ET_event_dare"
+                app:layout_constraintTop_toBottomOf="@+id/ET_event_dare" />
+
+            <com.example.fontutil.EditTextCustomFont
+                android:id="@+id/ET_PhoneNumber"
+                style="@style/maneF"
+                android:layout_width="@dimen/dimension0"
+                android:layout_height="@dimen/dimension50"
+                android:layout_marginTop="@dimen/dimension16"
+                android:background="@drawable/pttnn"
+                android:gravity="start|center_vertical"
+                android:singleLine="true"
+                android:hint="رقم الهاتف"
+                android:paddingStart="@dimen/dimension16"
+                android:paddingEnd="@dimen/dimension16"
+                app:font_name="@string/VIP_Rawy_Regular"
+                app:layout_constraintEnd_toEndOf="@+id/ET_FollName"
+                app:layout_constraintStart_toStartOf="@+id/ET_FollName"
+                app:layout_constraintTop_toBottomOf="@+id/ET_FollName" />
+
+            <com.example.fontutil.EditTextCustomFont
+                android:id="@+id/ET_password"
+                style="@style/maneF"
+                android:layout_width="@dimen/dimension0"
+                android:layout_height="@dimen/dimension50"
+                android:layout_marginTop="@dimen/dimension16"
+                android:background="@drawable/pttnn"
+                android:drawableEnd="@drawable/ic_pass_icp"
+                android:gravity="start|center_vertical"
+                android:singleLine="true"
+                android:hint="كلمة المرور"
+                android:paddingStart="@dimen/dimension16"
+                android:paddingEnd="@dimen/dimension16"
+                app:font_name="@string/VIP_Rawy_Regular"
+                app:layout_constraintEnd_toEndOf="@+id/ET_PhoneNumber"
+                app:layout_constraintStart_toStartOf="@+id/ET_PhoneNumber"
+                app:layout_constraintTop_toBottomOf="@+id/ET_PhoneNumber" />
+
+            <com.example.fontutil.TextViewCustomFont
+                android:id="@+id/textView11"
+                style="@style/sms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimension24"
+                android:text="لتأكيد الطلب ستصلك رساله SMS"
+                app:font_name="@string/VIP_Rawy_Regular"
+                app:layout_constraintEnd_toEndOf="@+id/ET_password"
+                app:layout_constraintStart_toStartOf="@+id/ET_password"
+                app:layout_constraintTop_toBottomOf="@+id/ET_password" />
+
+            <com.example.fontutil.ButtonCustomFont
+                android:id="@+id/BTN_ConfirmationRequest"
+                style="@style/yy_pp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimension50"
+                android:layout_marginTop="@dimen/dimension32"
+                android:background="@drawable/yyyy_pack"
+                android:layoutDirection="locale"
+                android:text="تأكيد"
+                app:font_name="@string/VIP_Rawy_Bold_Bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/ET_password"
+                app:layout_constraintStart_toStartOf="@+id/ET_password"
+                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

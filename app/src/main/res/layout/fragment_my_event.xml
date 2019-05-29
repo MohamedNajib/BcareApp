@@ -7,124 +7,168 @@
     android:background="@drawable/background_event"
     tools:context=".ui.fragment.bottom_nav.MyEventFragment">
 
-            <android.support.constraint.Guideline
-                android:id="@+id/guideline"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="364dp"
-                android:layout_marginBottom="365dp"
-                android:orientation="horizontal"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintGuide_begin="364dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/IV_ProfileNavIcon"
-                android:layout_width="@dimen/dimension21"
-                android:layout_height="@dimen/dimension16"
-                android:layout_marginTop="@dimen/dimension24"
-                android:layout_marginEnd="@dimen/dimension32"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_nav_icon" />
+    <ImageView
+        android:id="@+id/IV_ProfileNavIcon"
+        android:layout_width="@dimen/dimension21"
+        android:layout_height="@dimen/dimension16"
+        android:layout_marginTop="@dimen/dimension24"
+        android:layout_marginEnd="@dimen/dimension24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_nav_icon" />
 
-            <ImageView
-                android:id="@+id/IV_ProfileNotificationIcon"
-                android:layout_width="@dimen/dimension20"
-                android:layout_height="@dimen/dimension20"
-                android:layout_marginEnd="@dimen/dimension16"
-                app:layout_constraintBottom_toBottomOf="@+id/IV_ProfileNavIcon"
-                app:layout_constraintEnd_toStartOf="@+id/IV_ProfileNavIcon"
-                app:layout_constraintTop_toTopOf="@+id/IV_ProfileNavIcon"
-                app:layout_constraintVertical_bias="1.0"
-                app:srcCompat="@drawable/ic_notification_icon" />
+    <ImageView
+        android:id="@+id/IV_ProfileNotificationIcon"
+        android:layout_width="@dimen/dimension20"
+        android:layout_height="@dimen/dimension20"
+        android:layout_marginEnd="@dimen/dimension16"
+        app:layout_constraintBottom_toBottomOf="@+id/IV_ProfileNavIcon"
+        app:layout_constraintEnd_toStartOf="@+id/IV_ProfileNavIcon"
+        app:layout_constraintTop_toTopOf="@+id/IV_ProfileNavIcon"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_notification_icon" />
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dimension32"
-                android:layout_marginTop="@dimen/dimension24"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_path_" />
-
-            <com.example.fontutil.TextViewCustomFont
-                android:id="@+id/textViewCustomFont11"
-                style="@style/eve"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dimension8"
-                android:layout_marginBottom="@dimen/dimension8"
-                android:text="مواعيدي"
-                app:font_name="@string/VIP_Rawy_Bold_Bold"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-                app:layout_constraintStart_toEndOf="@+id/imageView2"
-                app:layout_constraintTop_toTopOf="@+id/imageView2" />
-
-            <com.example.fontutil.TextViewCustomFont
-                android:id="@+id/textViewCustomFont12"
-                style="@style/ev"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dimension16"
-                android:text="المواعيد القادمة"
-                app:font_name="@string/VIP_Rawy_Bold_Bold"
-                app:layout_constraintStart_toStartOf="@+id/imageView2"
-                app:layout_constraintTop_toBottomOf="@+id/textViewCustomFont11" />
-
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recyclerView2"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dimension0"
-                android:layout_marginTop="@dimen/dimension8"
-                android:orientation="vertical"
-                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
-                app:layout_constraintBottom_toTopOf="@+id/guideline"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textViewCustomFont12"
-                app:layout_constraintVertical_bias="1.0"
-                tools:layoutManager="android.support.v7.widget.LinearLayoutManager"
-                tools:listitem="@layout/item_upcoming_events"
-                tools:orientation="vertical"
-                tools:scrollbars="vertical"
-                tools:showIn="@layout/item_upcoming_events"
-                tools:spanCount="2"/>
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimension24"
+        android:layout_marginTop="@dimen/dimension24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_path_" />
 
     <com.example.fontutil.TextViewCustomFont
-                android:id="@+id/textViewCustomFont14"
-                style="@style/resyc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dimension8"
-                android:layout_marginTop="@dimen/dimension8"
-                android:text="مواعيد سابقة"
-                app:font_name="@string/VIP_Rawy_Bold_Bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/recyclerView2" />
+        android:id="@+id/textViewCustomFont11"
+        style="@style/eve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimension8"
+        android:layout_marginBottom="@dimen/dimension8"
+        android:text="مواعيدي"
+        app:font_name="@string/VIP_Rawy_Bold_Bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
-    <android.support.v7.widget.RecyclerView
+    <com.example.fontutil.TextViewCustomFont
+        android:id="@+id/textViewCustomFont12"
+        style="@style/ev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimension16"
+        android:text="المواعيد القادمة"
+        app:font_name="@string/VIP_Rawy_Bold_Bold"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCustomFont11" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout7"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dimension0"
         android:orientation="vertical"
-        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewCustomFont14"
-        tools:layoutManager="android.support.v7.widget.LinearLayoutManager"
-        tools:listitem="@layout/item_last_events"
-        tools:orientation="vertical"
-        tools:scrollbars="vertical"
-        tools:showIn="@layout/item_upcoming_events"
-        tools:spanCount="2"/>
+        app:layout_constraintTop_toBottomOf="@+id/textViewCustomFont12">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimension8"
+            android:orientation="vertical"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            tools:itemCount="2"
+            tools:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_upcoming_events"
+            tools:orientation="vertical"
+            tools:scrollbars="vertical"
+            tools:showIn="@layout/item_upcoming_events"
+            tools:spanCount="2" />
+
+        <com.example.fontutil.TextViewCustomFont
+            android:id="@+id/textViewCustomFont14"
+            style="@style/resyc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimension24"
+            android:layout_marginTop="@dimen/dimension8"
+            android:text="مواعيد سابقة"
+            app:font_name="@string/VIP_Rawy_Bold_Bold" />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            tools:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_last_events"
+            tools:orientation="vertical"
+            tools:scrollbars="vertical"
+            tools:showIn="@layout/item_upcoming_events"
+            tools:spanCount="2" />
 
 
+    </LinearLayout>
 
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCustomFont11">
+
+        <com.example.fontutil.TextViewCustomFont
+            android:id="@+id/textViewCustomFont18"
+            style="@style/no_events"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ليس لديك مواعيد قادما حاليا"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.example.fontutil.ButtonCustomFont
+            android:id="@+id/buttonCustomFont3"
+            style="yyy"
+            android:layout_width="@dimen/dimension0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimension8"
+            android:layout_marginEnd="@dimen/dimension8"
+            android:background="@drawable/yy_btn"
+            android:text="حجز موعد"
+            app:font_name="@string/VIP_Rawy_Bold_Bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/buttonCustomFont4"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCustomFont18" />
+
+        <com.example.fontutil.ButtonCustomFont
+            android:id="@+id/buttonCustomFont4"
+            style="@style/ttt"
+            android:layout_width="@dimen/dimension0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimension8"
+            android:layout_marginTop="@dimen/dimension8"
+            android:background="@drawable/trans_btn"
+            android:drawableStart="@drawable/ic_path_ttt"
+            android:gravity="center"
+            android:paddingStart="@dimen/dimension16"
+            android:paddingEnd="@dimen/dimension16"
+            android:text="الصالونات القريبة"
+            app:font_name="@string/VIP_Rawy_Bold_Bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/buttonCustomFont3"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCustomFont18"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </android.support.constraint.ConstraintLayout>
 
 </android.support.constraint.ConstraintLayout>

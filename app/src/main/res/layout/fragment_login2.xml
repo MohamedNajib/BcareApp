@@ -61,6 +61,8 @@
             <com.example.fontutil.EditTextCustomFont
                 android:id="@+id/ET_LoginPhoneNumber"
                 style="@style/EditTextStyle"
+                android:layout_marginStart="@dimen/dimension24"
+                android:layout_marginEnd="@dimen/dimension24"
                 android:hint="01008021145"
                 android:inputType="phone"
                 app:font_name="@string/VIP_Rawy_Regular"

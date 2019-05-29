@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.ReviewsSpecialFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/review_background_"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.example.fontutil.TextViewCustomFont
+            android:id="@+id/textViewCustomFont20"
+            style="@style/rev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimension24"
+            android:layout_marginTop="@dimen/dimension16"
+            android:layout_marginBottom="@dimen/dimension16"
+            android:text="كامل علامة"
+            app:font_name="@string/VIP_Rawy_Bold_Bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/IV_ReviewsPackIcon"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/IV_ReviewsPackIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimension24"
+            android:layout_marginEnd="@dimen/dimension24"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewCustomFont20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textViewCustomFont20"
+            app:layout_constraintTop_toTopOf="@+id/textViewCustomFont20"
+            app:srcCompat="@drawable/ic_chevron_right_black_24dp" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimension0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout6"
+        app:layout_constraintVertical_bias="1.0">
+
+
+        <com.example.bcareapplication.ui.custom.RoundRectCornerImageView
+            android:id="@+id/roundRectCornerImageView3"
+            android:layout_width="@dimen/dimension150"
+            android:layout_height="@dimen/dimension150"
+            android:layout_marginStart="@dimen/dimension24"
+            android:layout_marginTop="@dimen/dimension16"
+            android:src="@drawable/rrr"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.example.fontutil.TextViewCustomFont
+            android:id="@+id/textViewCustomFont21"
+            style="@style/nam_s"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimension8"
+            android:layout_marginEnd="@dimen/dimension16"
+            android:text="كامل علامة"
+            app:font_name="@string/VIP_Rawy_Bold_Bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/roundRectCornerImageView3"
+            app:layout_constraintTop_toTopOf="@+id/roundRectCornerImageView3" />
+
+        <com.example.fontutil.TextViewCustomFont
+            android:id="@+id/textViewCustomFont22"
+            style="@style/revv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimension16"
+            android:text="خبير الشعر"
+            app:font_name="@string/VIP_Rawy_Regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textViewCustomFont21"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCustomFont21" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:rating="3"
+            android:stepSize="1"
+            android:theme="@style/RatingBar"
+            app:layout_constraintStart_toStartOf="@+id/textViewCustomFont22"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCustomFont22" />
+
+        <com.example.fontutil.ButtonCustomFont
+            android:id="@+id/buttonCustomFont5"
+            style="@style/requst_"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimension32"
+            android:background="@drawable/y_y"
+            android:paddingStart="@dimen/dimension32"
+            android:paddingEnd="@dimen/dimension32"
+            android:text="أطلب خدماته"
+            app:font_name="@string/VIP_Rawy_Regular"
+            app:layout_constraintBottom_toBottomOf="@+id/roundRectCornerImageView3"
+            app:layout_constraintStart_toStartOf="@+id/ratingBar"
+            app:layout_constraintTop_toBottomOf="@+id/ratingBar"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <com.example.fontutil.TextViewCustomFont
+            android:id="@+id/textViewCustomFont23"
+            style="@style/rat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimension24"
+            android:text="قيم الأخصائي"
+            app:font_name="@string/VIP_Rawy_Regular"
+            app:layout_constraintStart_toStartOf="@+id/roundRectCornerImageView3"
+            app:layout_constraintTop_toBottomOf="@+id/roundRectCornerImageView3" />
+
+        <com.example.fontutil.EditTextCustomFont
+            android:id="@+id/editTextCustomFont2"
+            android:layout_width="@dimen/dimension0"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimension24"
+            android:background="@drawable/pttnn"
+            android:gravity="center"
+            android:hint="اكتب رأيك في التطبيق هنا"
+            android:padding="@dimen/dimension12"
+            app:font_name="@string/VIP_Rawy_Regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/roundRectCornerImageView3"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCustomFont23" />
+
+        <com.example.fontutil.ButtonCustomFont
+            android:id="@+id/buttonCustomFont6"
+            style="@style/t_ppn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimension32"
+            android:layout_marginTop="@dimen/dimension8"
+            android:background="@drawable/pl"
+            android:paddingStart="@dimen/dimension32"
+            android:paddingEnd="@dimen/dimension32"
+            android:text="قدم تقييمك"
+            app:font_name="@string/VIP_Rawy_Regular"
+            app:layout_constraintEnd_toEndOf="@+id/editTextCustomFont2"
+            app:layout_constraintTop_toBottomOf="@+id/editTextCustomFont2" />
+
+        <RatingBar
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimension8"
+            android:numStars="5"
+            android:rating="3"
+            android:stepSize="1"
+            android:theme="@style/RatingBar"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonCustomFont6"
+            app:layout_constraintEnd_toStartOf="@+id/buttonCustomFont6"
+            app:layout_constraintStart_toStartOf="@+id/editTextCustomFont2"
+            app:layout_constraintTop_toTopOf="@+id/buttonCustomFont6" />
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimension1"
+            android:layout_marginTop="@dimen/dimension16"
+            android:background="#ff3d5a6f"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonCustomFont6" />
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimension1"
+            android:layout_marginTop="@dimen/dimension24"
+            android:background="#ff000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+        <com.example.fontutil.TextViewCustomFont
+            android:id="@+id/textViewCustomFont24"
+            style="@style/revu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimension24"
+            android:text="آراء العملاء"
+            app:font_name="@string/VIP_Rawy_Regular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimension8"
+            app:layout_constraintBottom_toTopOf="@+id/buttonCustomFont7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCustomFont24" />
+
+        <com.example.fontutil.ButtonCustomFont
+            android:id="@+id/buttonCustomFont7"
+            android:layout_width="@dimen/dimension0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimension24"
+            android:layout_marginEnd="@dimen/dimension24"
+            android:layout_marginBottom="@dimen/dimension24"
+            android:background="@drawable/ptnn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

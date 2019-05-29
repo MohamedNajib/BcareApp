@@ -8,4 +8,9 @@
     <color name="gray">#272727</color>
     <color name="bottom_nav">#3B3F52</color>
 
+    <color name="dialog">#40000000</color>
+
+    <color name="Rat_a">#3A3E51</color>
+    <color name="Rar_b">#9DA9BD</color>
+
 </resources>

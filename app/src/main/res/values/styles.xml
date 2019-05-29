@@ -12,6 +12,12 @@
         <item name="android:fontFamily">@font/vip_rawy_regular</item>
     </style>
 
+    <!-- Rating Bar Style -->
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/Rar_b</item>
+        <item name="colorControlActivated">@color/Rat_a</item>
+    </style>
+
 
     <style name="TransparentStatusBar" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
@@ -87,6 +93,21 @@
     <style name="__">
         <item name="android:textColor">#ff9eaabe</item>
         <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="conff">
+        <item name="android:textColor">#ff9eaabe</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="vip_saloon">
+        <item name="android:textColor">#ff10cbc4</item>
+        <item name="android:textSize">21sp</item>
+    </style>
+
+    <style name="nu">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">24sp</item>
     </style>
 
     <style name="login_btn">
@@ -180,6 +201,21 @@
         <item name="android:textSize">13sp</item>
     </style>
 
+    <style name="nam_s">
+        <item name="android:textColor">#ff000000</item>
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="revv">
+        <item name="android:textColor">#ff9eaabe</item>
+        <item name="android:textSize">23sp</item>
+    </style>
+
+    <style name="rev">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
     <style name="Specialists">
         <item name="android:textColor">#ffffffff</item>
         <item name="android:textSize">20sp</item>
@@ -188,6 +224,11 @@
     <style name="eve">
         <item name="android:textColor">#ffffffff</item>
         <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="conf">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">30sp</item>
     </style>
 
     <style name="ev">
@@ -230,4 +271,67 @@
         <item name="android:textColor">#ff808897</item>
         <item name="android:textSize">14sp</item>
     </style>
+
+    <style name="no_events">
+        <item name="android:textColor">#ffe5e5e5</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="yyy">
+        <item name="android:textColor">#ff3b3f52</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ttt">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="eedd_">
+        <item name="android:textColor">#ff9eaabe</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="maneF">
+        <item name="android:textColor">#ff808897</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="sms">
+        <item name="android:textColor">#ff10cbc4</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="yy_pp">
+        <item name="android:textColor">#ff433706</item>
+        <item name="android:textSize">27sp</item>
+    </style>
+
+    <style name="dialog">
+        <item name="android:textColor">#ff3b3f52</item>
+        <item name="android:textSize">27sp</item>
+    </style>
+
+    <style name="requst_">
+        <item name="android:textColor">#ff242427</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="rat">
+        <item name="android:textColor">#ff090909</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="t_ppn">
+        <item name="android:textColor">#ff3b3f52</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="revu">
+        <item name="android:textColor">#ff090909</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
 </resources>
