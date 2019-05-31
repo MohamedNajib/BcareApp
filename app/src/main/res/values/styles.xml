@@ -12,6 +12,11 @@
         <item name="android:fontFamily">@font/vip_rawy_regular</item>
     </style>
 
+    <style name="TextAppearance.RobotoMedium" parent="android:TextAppearance">
+        <!-- Custom Attr-->
+        <item name="android:fontFamily">@font/vip_rawy_regular</item>
+    </style>
+
     <!-- Rating Bar Style -->
     <style name="RatingBar" parent="Theme.AppCompat">
         <item name="colorControlNormal">@color/Rar_b</item>
@@ -45,6 +50,166 @@
         <item name="android:textSize">12sp</item>
 
         <item name="android:background">@drawable/et_</item>
+    </style>
+
+    <style name="AppTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/tap_blue</item>
+        <item name="tabIndicatorHeight">@dimen/dimension3</item>
+        <item name="tabTextAppearance">@style/AppTabTextAppearance</item>
+        <item name="tabSelectedTextColor">@color/tap_blue</item>
+    </style>
+
+    <!-- For HomeFragment TabLayout Text Title -->
+    <style name="AppTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/text12</item>
+        <item name="android:textColor">#9DA9BD</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="ggg">
+        <item name="android:textColor">#ff808897</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="mItem">
+        <item name="android:textColor">#ffcccccc</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="ttx">
+        <item name="android:textColor">#ff0ac7c0</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="sttt">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="per">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">101sp</item>
+    </style>
+
+    <style name="hav_des">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">29sp</item>
+    </style>
+
+    <style name="desc">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">43sp</item>
+    </style>
+
+    <style name="bu">
+        <item name="android:textColor">#ff0ac7c0</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="item_m">
+        <item name="android:textColor">#ff0ac7c0</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="ssss">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">9sp</item>
+    </style>
+
+    <style name="one">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="s_item_p">
+        <item name="android:textColor">#ff3b3f52</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+
+    <style name="zcxz">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">29sp</item>
+    </style>
+
+    <style name="salon">
+        <item name="android:textColor">#ffe5e5e5</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ss_ll">
+        <item name="android:textColor">#ff9eaabe</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="pt_s">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="hhh">
+        <item name="android:textColor">#ff2c2e3d</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="sal">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="showMor">
+        <item name="android:textColor">#ff808897</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="sss">
+        <item name="android:textColor">#ff3b3f52</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ce">
+        <item name="android:textColor">#ff808897</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="men">
+        <item name="android:textColor">#ff10cbc4</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="qu">
+        <item name="android:textColor">#ff808897</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="cvb">
+        <item name="android:textColor">#ff808897</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="fac">
+        <item name="android:textColor">#ff3b3f52</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="her">
+        <item name="android:textColor">#ff808897</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="e_co">
+        <item name="android:textColor">#ffc4cbd8</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="cood">
+        <item name="android:textColor">#ff878e9c</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="pl">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">26sp</item>
     </style>
 
     <style name="victor_nic">
@@ -331,6 +496,26 @@
     <style name="revu">
         <item name="android:textColor">#ff090909</item>
         <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="mor">
+        <item name="android:textColor">#ff3b3f52</item>
+        <item name="android:textSize">19sp</item>
+    </style>
+
+    <style name="oct">
+        <item name="android:textColor">#ff515c6f</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="nnn">
+        <item name="android:textColor">#ff515c6f</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="mmmm">
+        <item name="android:textColor">#ff5a5773</item>
+        <item name="android:textSize">10sp</item>
     </style>
 
 

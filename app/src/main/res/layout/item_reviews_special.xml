@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImageView2"
+        android:layout_width="@dimen/dimension60"
+        android:layout_height="@dimen/dimension60"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/profile_i"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:numStars="5"
+        android:rating="3"
+        android:stepSize="1"
+        android:theme="@style/RatingBar"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintEnd_toStartOf="@+id/textViewCustomFont25"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/circleImageView2"
+        app:layout_constraintTop_toTopOf="@+id/circleImageView2" />
+
+    <com.example.fontutil.TextViewCustomFont
+        android:id="@+id/textViewCustomFont25"
+        style="@style/oct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="10 Oct, 2018"
+        app:font_name="@string/Helvetica_Light"
+        app:layout_constraintBottom_toBottomOf="@+id/ratingBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ratingBar"
+        app:layout_constraintTop_toTopOf="@+id/ratingBar" />
+
+    <com.example.fontutil.TextViewCustomFont
+        android:id="@+id/textViewCustomFont26"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="كريم افندي"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/circleImageView2"
+        app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+
+    <com.example.fontutil.TextViewCustomFont
+        android:id="@+id/textViewCustomFont27"
+        style="@style/nnn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق."
+        app:font_name="@string/VIP_Rawy_Regular"
+        app:layout_constraintEnd_toEndOf="@+id/textViewCustomFont26"
+        app:layout_constraintStart_toStartOf="@+id/textViewCustomFont26"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCustomFont26" />
+
+    <com.example.fontutil.ButtonCustomFont
+        android:id="@+id/buttonCustomFont8"
+        style="@style/mmmm"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/vnn"
+        android:text="غير مفيد"
+        app:font_name="@string/VIP_Rawy_Regular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textViewCustomFont27"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCustomFont27" />
+
+    <com.example.fontutil.ButtonCustomFont
+        style="@style/mmmm"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/ppo"
+        android:text="مفيد"
+        app:font_name="@string/VIP_Rawy_Regular"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonCustomFont8"
+        app:layout_constraintStart_toEndOf="@+id/buttonCustomFont8"
+        app:layout_constraintTop_toTopOf="@+id/buttonCustomFont8" />
+
+</android.support.constraint.ConstraintLayout>

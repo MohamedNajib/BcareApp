@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#23272D</color>
-    <color name="colorAccent">#ff10cbc4</color>
+    <color name="colorAccent">#FFEB3B</color>
 
     <color name="hintColor">#ff808897</color>
     <color name="gray">#272727</color>
@@ -12,5 +12,13 @@
 
     <color name="Rat_a">#3A3E51</color>
     <color name="Rar_b">#9DA9BD</color>
+
+    <color name="ba">#3B3F52</color>
+
+    <color name="tap_blue">#06C2BC</color>
+
+    <color name="backGround_SelectSalon">#2C2E3E</color>
+
+    <color name="backGround_SelectSalon_item">#3B3F52</color>
 
 </resources>

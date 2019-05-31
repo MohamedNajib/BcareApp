@@ -14,7 +14,8 @@ public class UserCycleActivity extends AppCompatActivity {
         setContentView(R.layout.activity_user_cycle);
 
 
-        startActivity(new Intent(this, BottomNavActivity.class));
+        //startActivity(new Intent(this, BottomNavActivity.class));
+        startActivity(new Intent(this, SalonActivity.class));
 
         //HelperMethod.replaceFragments(new ProfileFragment(), getSupportFragmentManager(), R.id.FragmentContainer);
     }

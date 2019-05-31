@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backGround_SelectSalon"
+    tools:context=".ui.fragment.SelectSalonFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle_s"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.example.fontutil.TextViewCustomFont
+            android:id="@+id/textViewCustomFont20"
+            style="@style/sal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimension24"
+            android:layout_marginTop="@dimen/dimension16"
+            android:text="اختيار الصالونة"
+            app:font_name="@string/VIP_Rawy_Bold_Bold"
+            app:layout_constraintEnd_toStartOf="@+id/IV_SelectSalonPackIcon"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/IV_SelectSalonPackIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimension24"
+            android:layout_marginEnd="@dimen/dimension24"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewCustomFont20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textViewCustomFont20"
+            app:layout_constraintTop_toTopOf="@+id/textViewCustomFont20"
+            app:srcCompat="@drawable/ic_chevron_right_black_24dp" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewCustomFont33"
+            app:layout_constraintEnd_toStartOf="@+id/textViewCustomFont33"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textViewCustomFont20"
+            app:layout_constraintTop_toTopOf="@+id/textViewCustomFont33"
+            app:srcCompat="@drawable/ic_path_c" />
+
+        <com.example.fontutil.TextViewCustomFont
+            android:id="@+id/textViewCustomFont33"
+            style="@style/salon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="دبي, حي التحرير المسكن الرابع"
+            app:font_name="@string/VIP_Rawy_Regular"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView8"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCustomFont20"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <com.example.fontutil.TextViewCustomFont
+        android:id="@+id/textViewCustomFont34"
+        style="@style/ss_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="الصالونات مرتبة الأقرب فالأقرب"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:font_name="@string/VIP_Rawy_Regular"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout6" />
+
+    <com.example.fontutil.ButtonCustomFont
+        android:id="@+id/button2"
+        style="@style/pt_s"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimension25"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/ptn_salon"
+        android:drawableEnd="@drawable/ic_group_sall"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="فلترة"
+        app:font_name="@string/VIP_Rawy_Regular"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewCustomFont34"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textViewCustomFont34"
+        app:layout_constraintTop_toTopOf="@+id/textViewCustomFont34" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCustomFont34"
+
+        tools:itemCount="2"
+        tools:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_select_salon"
+        tools:orientation="vertical"
+        tools:scrollbars="vertical"
+        tools:showIn="@layout/item_select_salon"
+        tools:spanCount="2" />
+
+</android.support.constraint.ConstraintLayout>

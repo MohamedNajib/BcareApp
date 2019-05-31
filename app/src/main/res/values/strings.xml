@@ -7,6 +7,9 @@
     <string name="zahra_arabic">zahra_arabic.otf</string>
     <string name="Dubai_Light">Dubai_Light.ttf</string>
     <string name="Dubai_Bold">Dubai_Bold.ttf</string>
+    <string name="Helvetica_Light">Helvetica_Light.ttf</string>
+    <string name="Trebuchet_MS">Trebuchet_MS.ttf</string>
+    <string name="VIPHakmRegular_VIPHakm">VIPHakmRegular_VIPHakm.ttf</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

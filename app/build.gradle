@@ -32,6 +32,9 @@ dependencies {
     // Font Util
     implementation 'com.github.MohamedNajib:FontUtil:0.1.1'
 
+    //RoundKornerLayouts
+    implementation 'com.jcminarro:RoundKornerLayouts:0.4.0'
+
     //CodeInput
     implementation 'com.github.glomadrian:CodeInput:1.1@aar'
 
@@ -50,7 +53,7 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 
     //Retrofit
-    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
 
 
