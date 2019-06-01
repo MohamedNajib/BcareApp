@@ -21,4 +21,7 @@
 
     <color name="backGround_SelectSalon_item">#3B3F52</color>
 
+    <color name="backGroundItem">#383A4E</color>
+
+    <color name="item_notification_w">#E8EBFE</color>
 </resources>

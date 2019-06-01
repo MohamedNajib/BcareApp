@@ -34,6 +34,14 @@
         <item name="android:windowTranslucentNavigation">true</item>
     </style>
 
+    <style name="MyProgressBarTwo" parent="@style/Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="colorButtonNormal">#0ACAC3</item>
+        <item name="colorControlActivated">#0ACAC3</item>
+        <item name="colorControlHighlight">#0ACAC3</item>
+        <item name="android:progressDrawable">@drawable/progress</item>
+        <item name="android:minWidth">150dp</item>
+    </style>
+
 
     <style name="EditTextStyle">
         <item name="android:layout_width">match_parent</item>
@@ -50,6 +58,11 @@
         <item name="android:textSize">12sp</item>
 
         <item name="android:background">@drawable/et_</item>
+    </style>
+
+    <style name="pers">
+        <item name="android:textColor">#ff10cbc4</item>
+        <item name="android:textSize">12sp</item>
     </style>
 
     <style name="AppTabLayout" parent="Widget.Design.TabLayout">
@@ -76,9 +89,39 @@
         <item name="android:textSize">11sp</item>
     </style>
 
+    <style name="con">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="cont">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="notifi">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="to_da">
+        <item name="android:textColor">#ff797979</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="mess">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">32sp</item>
+    </style>v
+
     <style name="ttx">
         <item name="android:textColor">#ff0ac7c0</item>
         <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="nam">
+        <item name="android:textColor">#ff3b3f52</item>
+        <item name="android:textSize">16sp</item>
     </style>
 
     <style name="sttt">
@@ -150,6 +193,11 @@
     <style name="hhh">
         <item name="android:textColor">#ff2c2e3d</item>
         <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="mnb">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">21sp</item>
     </style>
 
     <style name="sal">
@@ -305,14 +353,70 @@
         <item name="android:textSize">12sp</item>
     </style>
 
+    <style name="inTh">
+        <item name="android:textColor">#ff0ed6cf</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="vdf">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
     <style name="address">
         <item name="android:textColor">#ffffffff</item>
         <item name="android:textSize">16sp</item>
     </style>
 
+    <style name="tomo">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">26sp</item>
+    </style>
+
+    <style name="ma">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">19sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
     <style name="num">
         <item name="android:textColor">#ffffffff</item>
         <item name="android:textSize">23sp</item>
+    </style>
+
+    <style name="ddd">
+        <item name="android:textColor">#ff0ed6cf</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="amn">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="sdf">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="con_n">
+        <item name="android:textColor">#ff0ed6cf</item>
+        <item name="android:textSize">29sp</item>
+    </style>
+
+    <style name="mon">
+        <item name="android:textColor">#ffe5e5e5</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="dmj">
+        <item name="android:textColor">#ffe5e5e5</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="and">
+        <item name="android:textColor">#ffe5e5e5</item>
+        <item name="android:textSize">12sp</item>
     </style>
 
     <style name="ed">
@@ -517,6 +621,64 @@
         <item name="android:textColor">#ff5a5773</item>
         <item name="android:textSize">10sp</item>
     </style>
+
+    <style name="newr">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="_am">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="nmn">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="mvm">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">9sp</item>
+    </style>
+
+    <style name="mvcb">
+        <item name="android:textColor">#ff3b3f52</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="ttiimm">
+        <item name="android:textColor">#ff181818</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="deds">
+        <item name="android:textColor">#ff848484</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="m_nam">
+        <item name="android:textColor">#ff181818</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="mmma">
+        <item name="android:textColor">#ff434343</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="notfy">
+        <item name="android:textColor">#ff434343</item>
+        <item name="android:textSize">9sp</item>
+    </style>
+
+    <style name="notf">
+        <item name="android:textColor">#ff434343</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
 
 
 </resources>
