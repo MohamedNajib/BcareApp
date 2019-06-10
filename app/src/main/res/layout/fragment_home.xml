@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/profile_background"
-    tools:context=".ui.fragment.bottom_nav.HomeFragment">
+    tools:context=".ui.fragment.bottom_nav.UserHomeFragment">
 
 
     <ScrollView
@@ -23,7 +23,7 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/IV_ProfileNavIcon"
+                android:id="@+id/IV_UserHomeNavIcon"
                 android:layout_width="@dimen/dimension21"
                 android:layout_height="@dimen/dimension16"
                 android:layout_marginTop="@dimen/dimension24"
@@ -33,24 +33,24 @@
                 app:srcCompat="@drawable/ic_nav_icon" />
 
             <ImageView
-                android:id="@+id/IV_ProfileNotificationIcon"
+                android:id="@+id/IV_UserHomeNotificationIcon"
                 android:layout_width="@dimen/dimension20"
                 android:layout_height="@dimen/dimension20"
                 android:layout_marginEnd="@dimen/dimension16"
-                app:layout_constraintBottom_toBottomOf="@+id/IV_ProfileNavIcon"
-                app:layout_constraintEnd_toStartOf="@+id/IV_ProfileNavIcon"
-                app:layout_constraintTop_toTopOf="@+id/IV_ProfileNavIcon"
+                app:layout_constraintBottom_toBottomOf="@+id/IV_UserHomeNavIcon"
+                app:layout_constraintEnd_toStartOf="@+id/IV_UserHomeNavIcon"
+                app:layout_constraintTop_toTopOf="@+id/IV_UserHomeNavIcon"
                 app:layout_constraintVertical_bias="1.0"
                 app:srcCompat="@drawable/ic_notification_icon" />
 
             <ImageView
-                android:id="@+id/IV_ProfileMessageIcon"
+                android:id="@+id/IV_UserHomeMessageIcon"
                 android:layout_width="@dimen/dimension20"
                 android:layout_height="@dimen/dimension20"
                 android:layout_marginEnd="@dimen/dimension16"
-                app:layout_constraintBottom_toBottomOf="@+id/IV_ProfileNotificationIcon"
-                app:layout_constraintEnd_toStartOf="@+id/IV_ProfileNotificationIcon"
-                app:layout_constraintTop_toTopOf="@+id/IV_ProfileNotificationIcon"
+                app:layout_constraintBottom_toBottomOf="@+id/IV_UserHomeNotificationIcon"
+                app:layout_constraintEnd_toStartOf="@+id/IV_UserHomeNotificationIcon"
+                app:layout_constraintTop_toTopOf="@+id/IV_UserHomeNotificationIcon"
                 app:layout_constraintVertical_bias="1.0"
                 app:srcCompat="@drawable/ic_mesag_icon" />
 
@@ -63,7 +63,7 @@
                 android:text="مرحبا بك"
                 app:font_name="@string/VIP_Rawy_Bold_Bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/IV_ProfileMessageIcon" />
+                app:layout_constraintTop_toTopOf="@+id/IV_UserHomeMessageIcon" />
 
             <com.example.fontutil.TextViewCustomFont
                 android:id="@+id/textViewCustomFont3"
@@ -416,12 +416,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dimension24"
                 android:layout_marginBottom="@dimen/dimension32"
-                android:orientation="horizontal"
-                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewCustomFont10"
+                android:orientation="horizontal"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
                 tools:listitem="@layout/item_specialists" />
 
 

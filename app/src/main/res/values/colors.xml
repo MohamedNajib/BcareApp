@@ -23,5 +23,11 @@
 
     <color name="backGroundItem">#383A4E</color>
 
+    <color name="white">#FFFFFF</color>
+
+    <color name="itemGray">#ff9eaabe</color>
+
     <color name="item_notification_w">#E8EBFE</color>
+
+    <color name="black">#000000</color>
 </resources>

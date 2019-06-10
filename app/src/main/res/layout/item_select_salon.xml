@@ -13,18 +13,30 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/imageView9"
+        <android.support.v4.view.ViewPager
+            android:id="@+id/Slider_ViewPager"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:scaleType="fitXY"
             android:src="@drawable/abaya_abu_ancient"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"  />
+
+
+        <me.relex.circleindicator.CircleIndicator
+            android:id="@+id/SliderIndicator"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimension50"
+            app:ci_width="@dimen/dimension5"
+            app:ci_height="@dimen/dimension5"
+            app:ci_drawable="@drawable/indicator_b"
+            app:ci_drawable_unselected="@drawable/indicator_a"
+            app:layout_constraintBottom_toBottomOf="@+id/Slider_ViewPager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <com.example.fontutil.TextViewCustomFont
-            android:id="@+id/textViewCustomFont35"
+            android:id="@+id/TV_SalonServiceName"
             style="@style/mItem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -33,24 +45,24 @@
             android:text="صالون للعناية الكاملة"
             app:font_name="@string/VIP_Rawy_Regular"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+            app:layout_constraintTop_toBottomOf="@+id/Slider_ViewPager" />
 
         <com.example.fontutil.TextViewCustomFont
-            android:id="@+id/textViewCustomFont36"
+            android:id="@+id/TV_SalonName"
             style="@style/zcxz"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="صالون للعناية الكاملة"
             app:font_name="@string/VIP_Rawy_Bold_Bold"
-            app:layout_constraintEnd_toStartOf="@+id/buttonCustomFont9"
+            app:layout_constraintEnd_toStartOf="@+id/BTN_Booking"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewCustomFont35" />
+            app:layout_constraintTop_toBottomOf="@+id/TV_SalonServiceName" />
 
         <com.example.fontutil.ButtonCustomFont
-            android:id="@+id/buttonCustomFont9"
+            android:id="@+id/BTN_Booking"
             style="@style/s_item_p"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/dimension36"
@@ -62,26 +74,26 @@
             android:paddingEnd="@dimen/dimension8"
             android:text="حجز موعد"
             app:font_name="@string/VIP_Rawy_Regular"
-            app:layout_constraintBottom_toBottomOf="@+id/textViewCustomFont36"
+            app:layout_constraintBottom_toBottomOf="@+id/TV_SalonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textViewCustomFont36"
-            app:layout_constraintTop_toTopOf="@+id/textViewCustomFont36" />
+            app:layout_constraintStart_toEndOf="@+id/TV_SalonName"
+            app:layout_constraintTop_toTopOf="@+id/TV_SalonName" />
 
 
         <com.example.fontutil.TextViewCustomFont
-            android:id="@+id/textViewCustomFont38"
+            android:id="@+id/TV_SalonAddress"
             style="@style/ttx"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="مددينة دبي , شارع الشيخ وايد"
             app:font_name="@string/VIP_Rawy_Regular"
-            app:layout_constraintStart_toStartOf="@+id/textViewCustomFont36"
-            app:layout_constraintTop_toBottomOf="@+id/textViewCustomFont36" />
+            app:layout_constraintStart_toStartOf="@+id/TV_SalonName"
+            app:layout_constraintTop_toBottomOf="@+id/TV_SalonName" />
 
         <com.example.fontutil.TextViewCustomFont
-            android:id="@+id/textViewCustomFont39"
+            android:id="@+id/TV_SalonRate"
             style="@style/one"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -90,7 +102,7 @@
             android:text="123"
             app:font_name="@string/Trebuchet_MS"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewCustomFont38" />
+            app:layout_constraintTop_toBottomOf="@+id/TV_SalonAddress" />
 
         <com.example.fontutil.TextViewCustomFont
             android:id="@+id/textViewCustomFont40"
@@ -100,20 +112,18 @@
             android:layout_marginEnd="4dp"
             android:text="عدد المعجبين"
             app:font_name="@string/VIP_Rawy_Regular"
-            app:layout_constraintBottom_toBottomOf="@+id/textViewCustomFont39"
-            app:layout_constraintEnd_toStartOf="@+id/textViewCustomFont39"
-            app:layout_constraintTop_toTopOf="@+id/textViewCustomFont39"
+            app:layout_constraintBottom_toBottomOf="@+id/TV_SalonRate"
+            app:layout_constraintEnd_toStartOf="@+id/TV_SalonRate"
+            app:layout_constraintTop_toTopOf="@+id/TV_SalonRate"
             app:layout_constraintVertical_bias="0.0" />
 
         <RatingBar
-            android:id="@+id/ratingBar2"
+            android:id="@+id/RAT_SalonCountRate"
             style="?android:attr/ratingBarStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:numStars="5"
-            android:rating="3"
-            android:stepSize="1"
             app:layout_constraintBottom_toBottomOf="@+id/textViewCustomFont40"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textViewCustomFont40" />
@@ -131,7 +141,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textViewCustomFont40" />
 
         <ImageView
-            android:id="@+id/imageView10"
+            android:id="@+id/IV_ShareSalon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -143,13 +153,13 @@
             app:srcCompat="@drawable/ic_share_item" />
 
         <ImageView
-            android:id="@+id/imageView11"
+            android:id="@+id/IV_LikeSalon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="24dp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView10"
-            app:layout_constraintEnd_toStartOf="@+id/imageView10"
-            app:layout_constraintTop_toTopOf="@+id/imageView10"
+            app:layout_constraintBottom_toBottomOf="@+id/IV_ShareSalon"
+            app:layout_constraintEnd_toStartOf="@+id/IV_ShareSalon"
+            app:layout_constraintTop_toTopOf="@+id/IV_ShareSalon"
             app:srcCompat="@drawable/ic_group_like" />
 
         <com.example.fontutil.TextViewCustomFont
@@ -160,11 +170,12 @@
             android:layout_marginStart="8dp"
             android:text="ابتداءا من"
             app:font_name="@string/VIP_Rawy_Bold_Bold"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView11"
+            app:layout_constraintBottom_toBottomOf="@+id/IV_LikeSalon"
             app:layout_constraintStart_toStartOf="@+id/view10"
-            app:layout_constraintTop_toTopOf="@+id/imageView11" />
+            app:layout_constraintTop_toTopOf="@+id/IV_LikeSalon" />
 
         <com.example.fontutil.TextViewCustomFont
+            android:id="@+id/TV_SalonMainPrice"
             style="@style/bu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -51,8 +51,10 @@ public class ForgotPassword1 extends Fragment {
         switch (view.getId()) {
             case R.id.BTN_Restore_password_btn:
                 break;
+
             case R.id.TV_ForgotPass_LoginLink_:
                 break;
+
             case R.id.TV_ForgotPass_CreateAccountLink:
                 break;
         }

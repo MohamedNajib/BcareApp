@@ -11,11 +11,9 @@ import android.widget.TextView;
 import com.example.bcareapplication.R;
 import com.example.bcareapplication.ui.fragment.ConfirmationFragment;
 import com.example.bcareapplication.ui.fragment.ReviewsSpecialFragment;
-import com.example.bcareapplication.ui.fragment.bottom_nav.HomeFragment;
-import com.example.bcareapplication.ui.fragment.bottom_nav.MyEventFragment;
-import com.example.bcareapplication.ui.fragment.bottom_nav.ProfileFragment;
+import com.example.bcareapplication.ui.fragment.bottom_nav.UserHomeFragment;
 
-import static com.example.bcareapplication.HelperMethod.replaceFragments;
+import static com.example.bcareapplication.util.HelperMethod.replaceFragments;
 
 public class BottomNavActivity extends AppCompatActivity {
     private TextView mTextMessage;
@@ -31,7 +29,7 @@ public class BottomNavActivity extends AppCompatActivity {
             switch (item.getItemId()) {
 
                 case R.id.navigation_home:
-                    fragment = new HomeFragment();
+                    fragment = new UserHomeFragment();
                     break;
 
                 case R.id.navigation_time:

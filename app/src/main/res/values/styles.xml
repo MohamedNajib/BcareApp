@@ -65,6 +65,13 @@
         <item name="android:textSize">12sp</item>
     </style>
 
+    <style name="AppTabLayoutA" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/colorAccent</item>
+        <item name="tabIndicatorHeight">@dimen/dimension3</item>
+        <item name="tabTextAppearance">@style/AppTabTextAppearance</item>
+        <item name="tabSelectedTextColor">@color/gray</item>
+    </style>
+
     <style name="AppTabLayout" parent="Widget.Design.TabLayout">
         <item name="tabIndicatorColor">@color/tap_blue</item>
         <item name="tabIndicatorHeight">@dimen/dimension3</item>
@@ -72,7 +79,7 @@
         <item name="tabSelectedTextColor">@color/tap_blue</item>
     </style>
 
-    <!-- For HomeFragment TabLayout Text Title -->
+    <!-- For UserHomeFragment TabLayout Text Title -->
     <style name="AppTabTextAppearance" parent="TextAppearance.Design.Tab">
         <item name="android:textSize">@dimen/text12</item>
         <item name="android:textColor">#9DA9BD</item>
@@ -677,6 +684,11 @@
     <style name="notf">
         <item name="android:textColor">#ff434343</item>
         <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="pop_n">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">21sp</item>
     </style>
 
 

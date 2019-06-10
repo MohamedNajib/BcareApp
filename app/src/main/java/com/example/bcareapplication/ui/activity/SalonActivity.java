@@ -1,18 +1,16 @@
 package com.example.bcareapplication.ui.activity;
 
 import android.os.Bundle;
-import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.ImageView;
 
 import com.example.bcareapplication.R;
 import com.example.bcareapplication.adapter.ViewPagerTapsAdapter;
-import com.example.bcareapplication.ui.fragment.salon.AboutTapFragment;
-import com.example.bcareapplication.ui.fragment.salon.RatingsTapFragment;
-import com.example.bcareapplication.ui.fragment.salon.ServicesTapFragment;
+import com.example.bcareapplication.ui.fragment.salon_taps.AboutTapFragment;
+import com.example.bcareapplication.ui.fragment.salon_taps.RatingsTapFragment;
+import com.example.bcareapplication.ui.fragment.salon_taps.ServicesTapFragment;
 
 import java.util.Locale;
 

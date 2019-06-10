@@ -7,9 +7,8 @@
     android:background="@drawable/background_event"
     tools:context=".ui.fragment.bottom_nav.MyEventFragment">
 
-
     <ImageView
-        android:id="@+id/IV_ProfileNavIcon"
+        android:id="@+id/IV_MyEventNavIcon"
         android:layout_width="@dimen/dimension21"
         android:layout_height="@dimen/dimension16"
         android:layout_marginTop="@dimen/dimension24"
@@ -19,18 +18,18 @@
         app:srcCompat="@drawable/ic_nav_icon" />
 
     <ImageView
-        android:id="@+id/IV_ProfileNotificationIcon"
+        android:id="@+id/IV_MyEventNotificationIcon"
         android:layout_width="@dimen/dimension20"
         android:layout_height="@dimen/dimension20"
         android:layout_marginEnd="@dimen/dimension16"
-        app:layout_constraintBottom_toBottomOf="@+id/IV_ProfileNavIcon"
-        app:layout_constraintEnd_toStartOf="@+id/IV_ProfileNavIcon"
-        app:layout_constraintTop_toTopOf="@+id/IV_ProfileNavIcon"
+        app:layout_constraintBottom_toBottomOf="@+id/IV_MyEventNavIcon"
+        app:layout_constraintEnd_toStartOf="@+id/IV_MyEventNavIcon"
+        app:layout_constraintTop_toTopOf="@+id/IV_MyEventNavIcon"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ic_notification_icon" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dimension24"
@@ -48,9 +47,9 @@
         android:layout_marginBottom="@dimen/dimension8"
         android:text="مواعيدي"
         app:font_name="@string/VIP_Rawy_Bold_Bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <com.example.fontutil.TextViewCustomFont
         android:id="@+id/textViewCustomFont12"
@@ -60,7 +59,7 @@
         android:layout_marginTop="@dimen/dimension16"
         android:text="المواعيد القادمة"
         app:font_name="@string/VIP_Rawy_Bold_Bold"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/textViewCustomFont11" />
 
     <LinearLayout
@@ -74,7 +73,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewCustomFont12">
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/recyclerView2"
+            android:id="@+id/RV_MyEventCurrentDates"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dimension8"
@@ -99,6 +98,7 @@
             app:font_name="@string/VIP_Rawy_Bold_Bold" />
 
         <android.support.v7.widget.RecyclerView
+            android:id="@+id/RV_MyEventLastDates"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -110,15 +110,16 @@
             tools:showIn="@layout/item_upcoming_events"
             tools:spanCount="2" />
 
-
     </LinearLayout>
 
 
     <android.support.constraint.ConstraintLayout
+        android:visibility="gone"
+        android:id="@+id/CL_BTN_Container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginStart="@dimen/dimension24"
+        android:layout_marginEnd="@dimen/dimension24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewCustomFont11">
@@ -133,7 +134,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.example.fontutil.ButtonCustomFont
-            android:id="@+id/buttonCustomFont3"
+            android:id="@+id/BTN_MyEventNewBooking"
             style="yyy"
             android:layout_width="@dimen/dimension0"
             android:layout_height="wrap_content"
@@ -143,13 +144,13 @@
             android:text="حجز موعد"
             app:font_name="@string/VIP_Rawy_Bold_Bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/buttonCustomFont4"
+            app:layout_constraintEnd_toStartOf="@+id/BTN_MyEventNearbySalon"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewCustomFont18" />
 
         <com.example.fontutil.ButtonCustomFont
-            android:id="@+id/buttonCustomFont4"
+            android:id="@+id/BTN_MyEventNearbySalon"
             style="@style/ttt"
             android:layout_width="@dimen/dimension0"
             android:layout_height="wrap_content"
@@ -165,7 +166,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/buttonCustomFont3"
+            app:layout_constraintStart_toEndOf="@+id/BTN_MyEventNewBooking"
             app:layout_constraintTop_toBottomOf="@+id/textViewCustomFont18"
             app:layout_constraintVertical_bias="0.0" />
 

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.fragment.salon.AboutTapFragment">
+    tools:context=".ui.fragment.salon_taps.AboutTapFragment">
 
     <com.example.fontutil.TextViewCustomFont
         android:id="@+id/textViewCustomFont29"
