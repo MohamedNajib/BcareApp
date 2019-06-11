@@ -691,6 +691,19 @@
         <item name="android:textSize">21sp</item>
     </style>
 
+    <style name="spes">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">24sp</item>
+    </style>
 
+    <style name="spe">
+        <item name="android:textColor">#ffe5e5e5</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="sp">
+        <item name="android:textColor">#ff3b3f52</item>
+        <item name="android:textSize">19sp</item>
+    </style>
 
 </resources>

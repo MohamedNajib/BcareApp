@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.example.bcareapplication.R;
-import com.example.bcareapplication.data.model.api_model.salons.SalonData;
+import com.example.bcareapplication.adapter.fragments_adapter.SpecialistsAdapter;
 import com.example.bcareapplication.data.model.api_model.specialists.Specialists;
 import com.example.bcareapplication.data.model.api_model.specialists.SpecialistsData;
 import com.example.bcareapplication.data.rest.RetrofitClient;
@@ -28,7 +28,6 @@ import butterknife.Unbinder;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.http.Field;
 
 import static com.example.bcareapplication.Constants.FragmentsKeys.REQUEST_STATUS_OK;
 import static com.example.bcareapplication.util.HelperMethod.showToast;
@@ -47,6 +46,7 @@ public class SpecialistsFragment extends Fragment {
 
     /* member variable */
     private LinearLayoutManager mLayoutManager;
+    private SpecialistsAdapter mSpecialistsAdapter;
 
     //var
     private List<SpecialistsData> mSpecialistsData;
@@ -54,7 +54,6 @@ public class SpecialistsFragment extends Fragment {
     public SpecialistsFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -77,7 +76,7 @@ public class SpecialistsFragment extends Fragment {
 
         getSpecialists(
                 "Dcfilf27URGHSoLjMScVtJVgcNd6J1aSRoDjpGrorCGeKSBMYLyc6Z9H0RWp",
-                "ar", 1,1,1, "rate"
+                "ar", 1, 1, 1, "rate"
         );
 
         return view;
@@ -98,6 +97,9 @@ public class SpecialistsFragment extends Fragment {
                     if (response.body().getCode().equals(String.valueOf(REQUEST_STATUS_OK))) {
                         showToast(getContext(), "ok");
 
+                        mSpecialistsData = response.body().getData();
+                        mSpecialistsAdapter = new SpecialistsAdapter(getContext(), mSpecialistsData);
+                        RVSpecialists.setAdapter(mSpecialistsAdapter);
 
                     } else {
                         showToast(getContext(), "NO");
@@ -120,13 +122,8 @@ public class SpecialistsFragment extends Fragment {
         unbinder.unbind();
     }
 
-    @OnClick({R.id.IV_SpecialistsPackIcon, R.id.BTN_FilterSpecialists})
-    public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.IV_SpecialistsPackIcon:
-                break;
-            case R.id.BTN_FilterSpecialists:
-                break;
-        }
+
+    @OnClick(R.id.IV_SpecialistsPackIcon)
+    public void onViewClicked() {
     }
 }

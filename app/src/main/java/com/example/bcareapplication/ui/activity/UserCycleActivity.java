@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.bcareapplication.ui.fragment.SectionsFragment;
+import com.example.bcareapplication.ui.fragment.SpecialistsFragment;
 import com.example.bcareapplication.ui.fragment.user_cycle.ForgotPassword1;
 import com.example.bcareapplication.ui.fragment.user_cycle.ForgotPassword2;
 import com.example.bcareapplication.ui.fragment.user_cycle.ForgotPassword3;
@@ -29,7 +30,7 @@ public class UserCycleActivity extends AppCompatActivity {
         //startActivity(new Intent(this, BookingActivity.class));
 
 
-        HelperMethod.replaceFragments(new SelectSalonFragment(), getSupportFragmentManager(), R.id.FragmentContainer);
+        HelperMethod.replaceFragments(new SpecialistsFragment(), getSupportFragmentManager(), R.id.FragmentContainer);
     }
 
 
