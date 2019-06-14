@@ -14,14 +14,29 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.bcareapplication.R;
+import com.example.bcareapplication.data.model.api_model.salon_reserve.SalonReserve;
+import com.example.bcareapplication.data.model.api_model.salon_services.SalonServices;
+import com.example.bcareapplication.data.rest.RetrofitClient;
 import com.example.fontutil.ButtonCustomFont;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+import com.example.bcareapplication.adapter.fragments_adapter.SalonServicesAdapterB;
+import static com.example.bcareapplication.Constants.FragmentsKeys.REQUEST_STATUS_OK;
+import static com.example.bcareapplication.adapter.fragments_adapter.SalonServicesAdapterB.mServicesIdList;
+import static com.example.bcareapplication.adapter.fragments_adapter.SalonServicesAdapterB.mTotalPrice;
+import static com.example.bcareapplication.ui.fragment.SelectSalonFragment.mSalonId;
+import static com.example.bcareapplication.util.HelperMethod.showToast;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -52,6 +67,42 @@ public class ConfirmationFragment extends Fragment {
         }
 
         return view;
+    }
+
+    /**
+     * Reserve Request Salon Api Call
+     * mTotalPrice && mServicesIdList >> Total Price And  List Of Services ID >>
+     * {@link SalonServicesAdapterB}
+     *
+     * mSalonId >> {@link SelectSalonFragment}
+     */
+    private void salonReserveApiCall() {
+        Call<SalonReserve> salonReserveCall = RetrofitClient.getInstance().getApiServices().salonReserve(
+                "Dcfilf27URGHSoLjMScVtJVgcNd6J1aSRoDjpGrorCGeKSBMYLyc6Z9H0RWp",
+                "ar", mSalonId, mTotalPrice, 0, 120, "2019-06-13 18:28:02",
+                "mohaamed", "01110639433", "salon", mServicesIdList
+        );
+        salonReserveCall.enqueue(new Callback<SalonReserve>() {
+            @Override
+            public void onResponse(Call<SalonReserve> call, Response<SalonReserve> response) {
+                try {
+                    if (response.body().getCode().equals(String.valueOf(REQUEST_STATUS_OK))) {
+                        showToast(getContext(), "OK");
+                        showDialog();
+
+                    } else {
+                        showToast(getContext(), "NO");
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<SalonReserve> call, Throwable t) {
+
+            }
+        });
     }
 
 
@@ -94,7 +145,7 @@ public class ConfirmationFragment extends Fragment {
 
     @OnClick(R.id.BTN_ConfirmationRequest)
     public void onViewClicked() {
+        salonReserveApiCall();
 
-        showDialog();
     }
 }

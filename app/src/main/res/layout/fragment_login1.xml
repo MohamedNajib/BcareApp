@@ -12,8 +12,10 @@
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -58,100 +60,129 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView" />
 
+
             <LinearLayout
-                android:id="@+id/layout_phoneNumber"
+                android:id="@+id/LL_Main"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dimension50"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dimension24"
                 android:layout_marginTop="@dimen/dimension16"
                 android:layout_marginEnd="@dimen/dimension24"
-                android:layoutDirection="ltr"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView2">
 
-                <Spinner
-                    android:id="@+id/Spinner_LoginPhone"
-                    android:layout_width="@dimen/dimension62"
+                <LinearLayout
+                    android:id="@+id/layout_phoneNumber"
+                    android:layout_width="match_parent"
                     android:layout_height="@dimen/dimension50"
-                    android:background="@drawable/spinner" />
+                    android:layoutDirection="ltr"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/Spinner_LoginPhone"
+                        android:layout_width="@dimen/dimension62"
+                        android:layout_height="@dimen/dimension50"
+                        android:background="@drawable/spinner" />
+
+                    <com.example.fontutil.EditTextCustomFont
+                        android:id="@+id/ET_LoginPhone"
+                        style="@style/__"
+                        android:layout_width="@dimen/dimension0"
+                        android:layout_height="@dimen/dimension50"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        android:layout_weight="1"
+                        android:background="@drawable/et_"
+                        android:freezesText="true"
+                        android:gravity="center"
+                        android:hint="ادخل رقم الهاتف"
+                        android:inputType="phone"
+                        android:maxLines="1"
+                        android:textColorHint="#ff808897"
+                        app:font_name="@string/VIP_Rawy_Regular" />
+
+                </LinearLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/CL_OR"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <FrameLayout
+                        android:id="@+id/Line1"
+                        android:layout_width="@dimen/dimension0"
+                        android:layout_height="@dimen/dimension1"
+                        android:layout_marginStart="@dimen/dimension8"
+                        android:background="@drawable/line"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/TV_OR"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.example.fontutil.TextViewCustomFont
+                        android:id="@+id/TV_OR"
+                        style="@style/or"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:paddingStart="@dimen/dimension24"
+                        android:paddingEnd="@dimen/dimension24"
+                        android:text="أو"
+                        app:font_name="@string/VIP_Rawy_Bold_Bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <FrameLayout
+                        android:id="@+id/Line2"
+                        android:layout_width="@dimen/dimension0"
+                        android:layout_height="@dimen/dimension1"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="@dimen/dimension8"
+                        android:background="@drawable/line"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/TV_OR"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </android.support.constraint.ConstraintLayout>
 
                 <com.example.fontutil.EditTextCustomFont
-                    android:id="@+id/ET_LoginPhone"
-                    style="@style/__"
-                    android:layout_width="@dimen/dimension0"
-                    android:layout_height="@dimen/dimension50"
-                    android:layout_weight="1"
-                    android:background="@drawable/et_"
-                    android:freezesText="true"
-                    android:gravity="center"
-                    android:hint="ادخل رقم الهاتف"
-                    android:inputType="phone"
-                    android:maxLines="1"
-                    android:textColorHint="#ff808897"
+                    android:id="@+id/ET_LoginEmail"
+                    style="@style/EditTextStyle0"
+                    android:layout_width="match_parent"
+                    android:hint="البريد الاكتروني"
+                    android:layout_marginTop="@dimen/dimension0"
+                    android:inputType="textEmailAddress"
+                    app:font_name="@string/VIP_Rawy_Regular" />
+
+                <com.example.fontutil.EditTextCustomFont
+                    android:id="@+id/ET_LoginPassword"
+                    style="@style/EditTextStyle0"
+                    android:layout_width="match_parent"
+                    android:hint="كلمة المرور"
+                    android:inputType="textPassword"
                     app:font_name="@string/VIP_Rawy_Regular" />
 
             </LinearLayout>
 
 
-            <FrameLayout
-                android:id="@+id/frameLayout"
-                android:layout_width="@dimen/dimension0"
-                android:layout_height="@dimen/dimension1"
-                android:layout_marginStart="@dimen/dimension8"
-                android:layout_marginTop="@dimen/dimension24"
-                android:background="@drawable/line"
-                app:layout_constraintEnd_toEndOf="@+id/layout_phoneNumber"
-                app:layout_constraintStart_toEndOf="@+id/textView7"
-                app:layout_constraintTop_toBottomOf="@+id/layout_phoneNumber" />
-
-            <com.example.fontutil.TextViewCustomFont
-                android:id="@+id/textView7"
-                style="@style/or"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dimension16"
-                android:paddingStart="@dimen/dimension24"
-                android:paddingEnd="@dimen/dimension24"
-                android:text="أو"
-                app:font_name="@string/VIP_Rawy_Bold_Bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/layout_phoneNumber" />
-
-            <FrameLayout
-                android:id="@+id/frameLayout2"
-                android:layout_width="@dimen/dimension0"
-                android:layout_height="@dimen/dimension1"
-                android:layout_marginTop="@dimen/dimension24"
-                android:layout_marginEnd="@dimen/dimension8"
-                android:background="@drawable/line"
-                app:layout_constraintEnd_toStartOf="@+id/textView7"
-                app:layout_constraintStart_toStartOf="@+id/layout_phoneNumber"
-                app:layout_constraintTop_toBottomOf="@+id/layout_phoneNumber" />
-
-
-            <com.example.fontutil.EditTextCustomFont
-                android:id="@+id/ET_LoginEmail"
-                style="@style/EditTextStyle0"
-                android:inputType="textEmailAddress"
-                android:hint="البريد الاكتروني"
-                app:font_name="@string/VIP_Rawy_Regular"
-                app:layout_constraintEnd_toEndOf="@+id/frameLayout"
-                app:layout_constraintStart_toStartOf="@+id/frameLayout2"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-
-            <com.example.fontutil.EditTextCustomFont
-                android:id="@+id/ET_LoginPassword"
-                style="@style/EditTextStyle0"
-                android:hint="كلمة المرور"
-                android:inputType="textPassword"
-                app:font_name="@string/VIP_Rawy_Regular"
-                app:layout_constraintEnd_toEndOf="@+id/ET_LoginEmail"
-                app:layout_constraintStart_toStartOf="@+id/ET_LoginEmail"
-                app:layout_constraintTop_toBottomOf="@+id/ET_LoginEmail" />
+            <ImageView
+                android:id="@+id/IV_Close_"
+                android:layout_width="@dimen/dimension20"
+                android:layout_height="@dimen/dimension20"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/ic_close_s"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/LL_Main"
+                app:layout_constraintTop_toTopOf="@+id/LL_Main"
+                app:srcCompat="@drawable/ic_close_black" />
 
             <com.example.fontutil.ButtonCustomFont
                 android:id="@+id/BTN_Login"
@@ -162,9 +193,9 @@
                 android:background="@drawable/login_btn"
                 android:text="تسجيل الدخول"
                 app:font_name="@string/VIP_Rawy_Bold_Bold"
-                app:layout_constraintEnd_toEndOf="@+id/ET_LoginPassword"
-                app:layout_constraintStart_toStartOf="@+id/ET_LoginPassword"
-                app:layout_constraintTop_toBottomOf="@+id/ET_LoginPassword" />
+                app:layout_constraintEnd_toEndOf="@+id/LL_Main"
+                app:layout_constraintStart_toStartOf="@+id/LL_Main"
+                app:layout_constraintTop_toBottomOf="@+id/LL_Main" />
 
             <com.example.fontutil.TextViewCustomFont
                 android:id="@+id/TV_Login_ForgotPasslink"

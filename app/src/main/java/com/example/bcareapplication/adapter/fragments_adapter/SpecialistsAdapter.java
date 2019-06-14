@@ -24,16 +24,18 @@ public class SpecialistsAdapter extends RecyclerView.Adapter<SpecialistsAdapter.
 
     private Context mContext;
     private List<SpecialistsData> mSpecialistsData;
+    private OnClickItem mOnClickItem;
 
-    public SpecialistsAdapter(Context mContext, List<SpecialistsData> mSpecialistsData) {
+    public SpecialistsAdapter(Context mContext, List<SpecialistsData> mSpecialistsData, OnClickItem onClickItem) {
         this.mContext = mContext;
         this.mSpecialistsData = mSpecialistsData;
+        this.mOnClickItem = onClickItem;
     }
 
     @NonNull
     @Override
     public SpecialistsHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        return new SpecialistsHolder(LayoutInflater.from(mContext).inflate(R.layout.item_specialists_a, viewGroup, false));
+        return new SpecialistsHolder(LayoutInflater.from(mContext).inflate(R.layout.item_specialists_a, viewGroup, false), mOnClickItem);
     }
 
     @Override
@@ -58,7 +60,7 @@ public class SpecialistsAdapter extends RecyclerView.Adapter<SpecialistsAdapter.
         return mSpecialistsData.size();
     }
 
-    public class SpecialistsHolder extends RecyclerView.ViewHolder {
+    public class SpecialistsHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         @BindView(R.id.IV_SpecialistImage)
         RoundRectCornerImageView IVSpecialistImage;
@@ -72,11 +74,30 @@ public class SpecialistsAdapter extends RecyclerView.Adapter<SpecialistsAdapter.
         ButtonCustomFont BTNSpecialistBooking;
 
         private final View view;
+        private OnClickItem mOnClickItem;
 
-        public SpecialistsHolder(@NonNull View itemView) {
+        public SpecialistsHolder(@NonNull View itemView, OnClickItem onClickItem) {
             super(itemView);
             this.view = itemView;
             ButterKnife.bind(this, view);
+            this.mOnClickItem = onClickItem;
+            view.setOnClickListener(this);
         }
+
+        @Override
+        public void onClick(View v) {
+            if (v == view){
+                int position = getAdapterPosition();
+                if (mOnClickItem != null && position != RecyclerView.NO_POSITION) {
+                    mOnClickItem.onItemClicked(position);
+                }
+            }
+        }
+    }
+
+    public interface OnClickItem{
+        void onItemClicked(int position);
+        //void onShareClicked(int position);
+
     }
 }

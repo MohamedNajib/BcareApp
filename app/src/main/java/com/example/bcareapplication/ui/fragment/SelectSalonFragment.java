@@ -35,6 +35,7 @@ import com.example.bcareapplication.data.model.api_model.favorite.Favorite;
 import com.example.bcareapplication.data.model.api_model.salons.SalonData;
 import com.example.bcareapplication.data.model.api_model.salons.Salons;
 import com.example.bcareapplication.data.rest.RetrofitClient;
+import com.example.bcareapplication.util.HelperMethod;
 import com.example.bcareapplication.util.MyLocationProvider;
 import com.example.fontutil.TextViewCustomFont;
 
@@ -52,6 +53,7 @@ import retrofit2.Response;
 
 import static com.example.bcareapplication.Constants.FragmentsKeys.MY_PERMISSIONS_REQUEST_ACCESS_GPS;
 import static com.example.bcareapplication.Constants.FragmentsKeys.REQUEST_STATUS_OK;
+import static com.example.bcareapplication.adapter.fragments_adapter.SalonServicesAdapterB.mTotalPrice;
 import static com.example.bcareapplication.util.HelperMethod.showToast;
 
 /**
@@ -75,6 +77,8 @@ public class SelectSalonFragment extends Fragment {
     private List<SalonData> mSalonDataList;
     private double mLatitude;
     private double mLongitude;
+
+    public static int mSalonId;
 
     public SelectSalonFragment() {
         // Required empty public constructor
@@ -110,12 +114,14 @@ public class SelectSalonFragment extends Fragment {
     }
 
     /**
-     * Get List Of Salon API Call
+     * Get List Of Salons API Call
      */
-    private void getSalonAPICall(String toke, String lang, int category_id, String user_latitude, String user_longitude, String orderBy) {
+    private void getSalonAPICall(String toke, String lang, int category_id, String user_latitude,
+                                 String user_longitude, int country_id, String orderBy, int salontype_id) {
+
         Call<Salons> salonCall = RetrofitClient.getInstance()
                 .getApiServices().getSalons(toke, lang, category_id, user_latitude, user_longitude
-                        , orderBy);
+                        , country_id, orderBy, salontype_id);
 
         salonCall.enqueue(new Callback<Salons>() {
             @Override
@@ -128,44 +134,36 @@ public class SelectSalonFragment extends Fragment {
                         mSelectSalonAdapter = new SelectSalonAdapter(getContext(), mSalonDataList, new SelectSalonAdapter.OnClickItem() {
                             @Override
                             public void onBookingClicked(int position) {
-                                showToast(getContext(), "  Booking Clicked");
+                                mTotalPrice = 0;
+                                HelperMethod.replaceFragments(new SalonServicesFragment(),
+                                        getActivity().getSupportFragmentManager(), R.id.FragmentContainer);
                             }
 
                             @Override
                             public void onShareClicked(int position) {
-                                //showToast(getContext(), "Share Clicked");
 
                                 Intent share = new Intent(Intent.ACTION_SEND);
                                 share.setType("text/plain");
                                 share.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
                                 share.putExtra(Intent.EXTRA_SUBJECT, "ShareSalon");
                                 share.putExtra(Intent.EXTRA_TEXT, mSalonDataList.get(position).getShareLink());
-                                startActivity(Intent.createChooser(share, "Share Salon"));
+                                startActivity(Intent.createChooser(share, "Share Salons"));
                             }
 
                             boolean mStatus = false;
-
                             @Override
                             public void onLikeClicked(int position, ImageView IV_LikeSalon) {
-                                //showToast(getContext(), "Like Clicked");
-
+                                mSalonId = mSalonDataList.get(position).getId();
                                 if (!mStatus) {
                                     mStatus = true;
                                     IV_LikeSalon.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.ic_group_liked));
-                                    addSalonToFavorite(
-                                            "Dcfilf27URGHSoLjMScVtJVgcNd6J1aSRoDjpGrorCGeKSBMYLyc6Z9H0RWp",
-                                            mSalonDataList.get(position).getId(),
-                                            1);
+                                    setFavoriteState(mSalonId, 1);
 
                                 } else {
                                     mStatus = false;
                                     IV_LikeSalon.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.ic_group_like));
-                                    addSalonToFavorite(
-                                            "Dcfilf27URGHSoLjMScVtJVgcNd6J1aSRoDjpGrorCGeKSBMYLyc6Z9H0RWp",
-                                            mSalonDataList.get(position).getId(),
-                                            0);
+                                    setFavoriteState(mSalonId, 0);
                                 }
-
                             }
                         });
                         RVSelectSalon.setAdapter(mSelectSalonAdapter);
@@ -186,7 +184,7 @@ public class SelectSalonFragment extends Fragment {
     }
 
     /**
-     * add Salon To Favorite Use API Call
+     * add Salons To Favorite Use API Call
      */
     private void addSalonToFavorite(String apiToken, int salonId, int toggle) {
         Call<Favorite> favoriteCall = RetrofitClient.getInstance().getApiServices().addFavorite(apiToken, salonId, toggle);
@@ -219,6 +217,13 @@ public class SelectSalonFragment extends Fragment {
         unbinder.unbind();
     }
 
+    private void setFavoriteState (int salonId, int state){
+        addSalonToFavorite(
+                "Dcfilf27URGHSoLjMScVtJVgcNd6J1aSRoDjpGrorCGeKSBMYLyc6Z9H0RWp",
+                salonId,
+                state);
+    }
+
     public void callApiMethod(String orderPy) {
         getSalonAPICall(
                 "Dcfilf27URGHSoLjMScVtJVgcNd6J1aSRoDjpGrorCGeKSBMYLyc6Z9H0RWp",
@@ -226,7 +231,9 @@ public class SelectSalonFragment extends Fragment {
                 1,
                 String.valueOf(mLatitude),
                 String.valueOf(mLongitude),
-                orderPy);
+                1,
+                orderPy,
+                1);
 
     }
 

@@ -66,6 +66,14 @@ public class SelectSalonAdapter extends RecyclerView.Adapter<SelectSalonAdapter.
         selectSalonHolder.TVSalonServiceName.setText(salonData.getServiceName());
         selectSalonHolder.TVSalonMainPrice.setText(salonData.getMinPrice());
 
+        // Favorite States
+        if (salonData.getIsFavorite() == null){
+            selectSalonHolder.IVLikeSalon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_group_like));
+
+        }else {
+            selectSalonHolder.IVLikeSalon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_group_liked));
+        }
+
         // RatingBar
         if (salonData.getSalonRate() == null){
             selectSalonHolder.RATSalonCountRate.setRating(0);
@@ -82,7 +90,7 @@ public class SelectSalonAdapter extends RecyclerView.Adapter<SelectSalonAdapter.
     }
 
     /**
-     * get String List Of Salon Images URL
+     * get String List Of Salons Images URL
      */
     private List<String> getImages(SalonData salonData) {
         List<String> salonImages = new ArrayList<>();

@@ -19,6 +19,12 @@ public class SalonData {
     @SerializedName("min_price")
     @Expose
     private String minPrice;
+    @SerializedName("code")
+    @Expose
+    private String code;
+    @SerializedName("mobile")
+    @Expose
+    private String mobile;
     @SerializedName("latitude")
     @Expose
     private String latitude;
@@ -28,6 +34,9 @@ public class SalonData {
     @SerializedName("service_name")
     @Expose
     private String serviceName;
+    @SerializedName("isFavorite")
+    @Expose
+    private String isFavorite;
     @SerializedName("salon_rate")
     @Expose
     private Object salonRate;
@@ -76,6 +85,22 @@ public class SalonData {
         this.minPrice = minPrice;
     }
 
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public String getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
+    }
+
     public String getLatitude() {
         return latitude;
     }
@@ -98,6 +123,14 @@ public class SalonData {
 
     public void setServiceName(String serviceName) {
         this.serviceName = serviceName;
+    }
+
+    public String getIsFavorite() {
+        return isFavorite;
+    }
+
+    public void setIsFavorite(String isFavorite) {
+        this.isFavorite = isFavorite;
     }
 
     public Object getSalonRate() {

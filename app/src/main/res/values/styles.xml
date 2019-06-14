@@ -49,7 +49,7 @@
         <item name="android:layout_marginStart">32dp</item>
         <item name="android:layout_marginEnd">32dp</item>
         <item name="android:layout_marginTop">16dp</item>
-
+        <item name="android:textCursorDrawable">@drawable/color_cursor</item>
         <item name="android:gravity">center</item>
         <item name="android:maxLines">1</item>
         <item name="android:textColorHint">@color/hintColor</item>
@@ -287,6 +287,7 @@
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">50dp</item>
 
+        <item name="android:textCursorDrawable">@drawable/color_cursor</item>
         <item name="android:layout_marginTop">8dp</item>
 
         <item name="android:gravity">center</item>
@@ -631,7 +632,7 @@
 
     <style name="newr">
         <item name="android:textColor">#ffffffff</item>
-        <item name="android:textSize">24sp</item>
+        <item name="android:textSize">20sp</item>
     </style>
 
     <style name="_am">
@@ -704,6 +705,16 @@
     <style name="sp">
         <item name="android:textColor">#ff3b3f52</item>
         <item name="android:textSize">19sp</item>
+    </style>
+
+    <style name="cnb">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">23sp</item>
+    </style>
+
+    <style name="total">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">24sp</item>
     </style>
 
 </resources>

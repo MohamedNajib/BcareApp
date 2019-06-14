@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.Spinner;
 
 import com.example.bcareapplication.R;
@@ -25,6 +26,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Locale;
 import java.util.Set;
 
 import butterknife.BindView;
@@ -48,6 +50,8 @@ public class SectionsFragment extends Fragment {
     Unbinder unbinder;
     @BindView(R.id.SpinnerCountrySections)
     Spinner SpinnerCountrySections;
+    @BindView(R.id.IV_SectionsPackIcon)
+    ImageView IVSectionsPackIcon;
 
     /* member variable */
     private LinearLayoutManager mLayoutManager;
@@ -67,6 +71,12 @@ public class SectionsFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_sections, container, false);
         unbinder = ButterKnife.bind(this, view);
+
+        if (Locale.getDefault().getLanguage().equals("ar")) {
+            IVSectionsPackIcon.setRotationY(getResources().getInteger(R.integer.Image_Locale_RTL_Mood));
+        } else {
+            IVSectionsPackIcon.setRotationY(getResources().getInteger(R.integer.Image_locale_LTR_Mood));
+        }
 
         mSalonDataList = new ArrayList<>();
         mLayoutManager = new LinearLayoutManager(getContext());

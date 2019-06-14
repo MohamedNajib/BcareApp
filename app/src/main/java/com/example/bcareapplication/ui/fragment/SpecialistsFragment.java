@@ -1,6 +1,8 @@
 package com.example.bcareapplication.ui.fragment;
 
 
+import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -16,6 +18,7 @@ import com.example.bcareapplication.adapter.fragments_adapter.SpecialistsAdapter
 import com.example.bcareapplication.data.model.api_model.specialists.Specialists;
 import com.example.bcareapplication.data.model.api_model.specialists.SpecialistsData;
 import com.example.bcareapplication.data.rest.RetrofitClient;
+import com.example.bcareapplication.util.HelperMethod;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,12 +50,21 @@ public class SpecialistsFragment extends Fragment {
     /* member variable */
     private LinearLayoutManager mLayoutManager;
     private SpecialistsAdapter mSpecialistsAdapter;
+    private ReviewsSpecialFragment.CommunicationSpecialists mCommunicationSpecialists;
 
     //var
     private List<SpecialistsData> mSpecialistsData;
 
     public SpecialistsFragment() {
         // Required empty public constructor
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+
+        Activity activity = (Activity) context;
+        mCommunicationSpecialists = (ReviewsSpecialFragment.CommunicationSpecialists) activity;
     }
 
     @Override
@@ -98,7 +110,17 @@ public class SpecialistsFragment extends Fragment {
                         showToast(getContext(), "ok");
 
                         mSpecialistsData = response.body().getData();
-                        mSpecialistsAdapter = new SpecialistsAdapter(getContext(), mSpecialistsData);
+                        mSpecialistsAdapter = new SpecialistsAdapter(getContext(), mSpecialistsData, new SpecialistsAdapter.OnClickItem() {
+                            @Override
+                            public void onItemClicked(int position) {
+                                mCommunicationSpecialists.getSpecializedData(
+                                        mSpecialistsData.get(position).getName(),
+                                        mSpecialistsData.get(position).getImage(),
+                                        mSpecialistsData.get(position).getSpecialistGroup(),
+                                        mSpecialistsData.get(position).getSpecialistRate()
+                                );
+                            }
+                        });
                         RVSpecialists.setAdapter(mSpecialistsAdapter);
 
                     } else {

@@ -260,7 +260,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
             <Spinner
-                android:id="@+id/spinner"
+                android:id="@+id/Spinner_Place"
                 android:layout_width="@dimen/dimension0"
                 android:layout_height="@dimen/dimension50"
                 android:layout_marginTop="@dimen/dimension16"
@@ -284,9 +284,9 @@
                 android:paddingStart="@dimen/dimension16"
                 android:paddingEnd="@dimen/dimension16"
                 app:font_name="@string/VIP_Rawy_Bold_Bold"
-                app:layout_constraintEnd_toEndOf="@+id/spinner"
-                app:layout_constraintStart_toStartOf="@+id/spinner"
-                app:layout_constraintTop_toBottomOf="@+id/spinner" />
+                app:layout_constraintEnd_toEndOf="@+id/Spinner_Place"
+                app:layout_constraintStart_toStartOf="@+id/Spinner_Place"
+                app:layout_constraintTop_toBottomOf="@+id/Spinner_Place" />
 
             <com.example.fontutil.EditTextCustomFont
                 android:id="@+id/ET_FollName"

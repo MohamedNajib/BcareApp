@@ -36,6 +36,15 @@ public abstract class Constants {
         public static final int REQUEST_STATUS_OK = 200;
 
 
+        /* CopounData Bundle Key UserCycleActivity */
+        public static final String SPECIALIZED_NAME = "s_name";
+        public static final String SPECIALIZED_IMAGE = "s_image";
+        public static final String SPECIALIZED_ADDRESS = "s_address";
+        public static final String SPECIALIZED_GROUP = "s_group";
+        public static final String SPECIALIZED_RATE = "s_rate";
+
+
+
     }
 
 }

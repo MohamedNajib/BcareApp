@@ -99,4 +99,6 @@ public class SectionsAdapterB extends RecyclerView.Adapter<SectionsAdapterB.Sect
             ButterKnife.bind(this, view);
         }
     }
+
+
 }
